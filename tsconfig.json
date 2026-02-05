@@ -10,7 +10,7 @@
         "baseUrl": ".",
         "checkJs": false,
         "declaration": true,
-        "declarationDir": ".cache/builds/docusaurus/site/types",
+        "declarationDir": "../../.cache/builds/docusaurus/site/types",
         "declarationMap": true,
         "disableSizeLimit": true,
         "downlevelIteration": true,
@@ -44,15 +44,9 @@
         "noUnusedParameters": true,
         "outDir": "../../.cache/builds/docusaurus/site",
         "paths": {
-            "@docusaurus/*": [
-                "./.docusaurus/docusaurus/*"
-            ],
-            "@site/*": [
-                "./*"
-            ],
-            "@theme/*": [
-                "./.docusaurus/theme/*"
-            ]
+            "@docusaurus/*": ["./.docusaurus/docusaurus/*"],
+            "@site/*": ["./*"],
+            "@theme/*": ["./.docusaurus/theme/*"]
         },
         "pretty": true,
         "resolveJsonModule": true,
@@ -68,7 +62,7 @@
         "strictNullChecks": true,
         "strictPropertyInitialization": true,
         "target": "ESNext",
-        "tsBuildInfoFile": "../../.cache/tsconfig.docusaurus.tsbuildinfo",
+        "tsBuildInfoFile": "../../.cache/tsbuildinfo/tsconfig.docusaurus.tsbuildinfo",
         "useDefineForClassFields": true,
         "useUnknownInCatchVariables": true
     },
@@ -87,6 +81,7 @@
         "**/*.tsx",
         "**/*.js",
         "**/*.jsx",
+        "**/*.d.ts",
         "src/**/*",
         "static/**/*",
         "sidebars.ts",

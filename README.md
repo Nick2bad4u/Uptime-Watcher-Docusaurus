@@ -2,11 +2,11 @@
 
 <div align="center">
 
-[![Docusaurus](https://img.shields.io/badge/Docusaurus-3.0+-green?logo=docusaurus\&logoColor=white)](https://docusaurus.io/)
-[![Node.js](https://img.shields.io/badge/Node.js-24.8+-339933?logo=node.js\&logoColor=white)](https://nodejs.org/)
-[![Deployment](https://img.shields.io/badge/Deployment-GitHub_Pages-blue?logo=github\&logoColor=white)](https://nick2bad4u.github.io/Uptime-Watcher/)
+[![Docusaurus badge.](https://img.shields.io/badge/Docusaurus-3.0+-green?logo=docusaurus\&logoColor=white)](https://docusaurus.io/)
+[![Node.js badge.](https://img.shields.io/badge/Node.js-24.8+-339933?logo=node.js\&logoColor=white)](https://nodejs.org/)
+[![Deployment badge.](https://img.shields.io/badge/Deployment-GitHub_Pages-blue?logo=github\&logoColor=white)](https://nick2bad4u.github.io/Uptime-Watcher/)
 
-**📖 Official documentation website for Uptime Watcher**
+## 📖 Official documentation website for Uptime Watcher
 
 _Built with Docusaurus - Modern static website generator for technical documentation_
 
@@ -16,7 +16,7 @@ _Built with Docusaurus - Modern static website generator for technical documenta
 
 This is the **backup documentation repository** for the Uptime Watcher project. The documentation is automatically generated from the main repository and deployed to GitHub Pages at:
 
-**🌐 <https://nick2bad4u.github.io/Uptime-Watcher/>**
+**🌐 Live site:** [nick2bad4u.github.io/Uptime-Watcher](https://nick2bad4u.github.io/Uptime-Watcher/)
 
 ### 📂 Repository Structure
 
@@ -32,7 +32,7 @@ This documentation site is part of the main Uptime Watcher project and serves as
 ### Prerequisites
 
 - **Node.js**: 24.8+ (required)
-- **npm**: 11.5.2+ (included with Node.js)
+- **npm**: 11.6.4+ (included with Node.js)
 - **Git**: Latest version
 
 ### Development Setup
@@ -106,7 +106,7 @@ yarn format
 
 ## 📁 Site Architecture
 
-```
+```folder
 docs/docusaurus/
 ├── blog/                   # Blog posts and announcements
 ├── docs/                   # Main documentation content
@@ -164,7 +164,7 @@ The site build process:
 
 ### Build Artifacts
 
-```
+```folder
 build/                     # Production build output
 ├── index.html            # Homepage
 ├── docs/                 # Documentation pages
@@ -202,6 +202,7 @@ GIT_USER=<username> GITHUB_TOKEN=<token> yarn deploy
 - **🔍 Search**: Full-text search across all documentation
 - **📱 Mobile Responsive**: Optimized mobile experience
 - **🌙 Dark Mode**: Toggle between light and dark themes
+- **📦 PWA**: Installable app experience + offline mode (via `@docusaurus/plugin-pwa`)
 - **🔗 Cross-References**: Internal linking between docs
 - **📈 Analytics**: Built-in analytics tracking
 - **🏷️ Versioning**: Documentation versioning support
@@ -236,6 +237,14 @@ For technical improvements:
 ## 🆘 Troubleshooting
 
 ### Common Issues
+
+**PWA / Service Worker Issues**
+
+```bash
+# Enable verbose PWA debug logs during build
+set DOCUSAURUS_PWA_DEBUG=true
+npm run build
+```
 
 **Build Failures**
 
@@ -278,13 +287,13 @@ Need help with the documentation site?
 
 ## 📄 License
 
-This documentation site is part of the Uptime Watcher project and is released under the [Unlicense](../../LICENSE) - Public Domain.
+This documentation site is part of the Uptime Watcher project and is released under the [Unlicense](../../README.md#-license) - Public Domain.
 
 ---
 
 <div align="center">
 
-**📚 Documentation powered by [Docusaurus](https://docusaurus.io/)**
+### 📚 Documentation powered by [Docusaurus](https://docusaurus.io/)
 
 _Last updated: November 2025_
 

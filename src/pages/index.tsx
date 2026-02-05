@@ -137,46 +137,55 @@ const UIDemo = (): JSX.Element => {
     ];
 
     return (
-        <div className={clsx(styles["appWindow"], styles["scrollReveal"])}>
-            <div className={styles["appHeader"]}>
-                <div className={styles["appButtons"]}>
-                    <span className={styles["appButtonRed"]} />
-                    <span className={styles["appButtonYellow"]} />
-                    <span className={styles["appButtonGreen"]} />
+        <div className={clsx(styles.appWindow, styles.scrollReveal)}>
+            <div className={styles.appHeader}>
+                <div className={styles.appButtons}>
+                    <span className={styles.appButtonRed} />
+
+                    <span className={styles.appButtonYellow} />
+
+                    <span className={styles.appButtonGreen} />
                 </div>
-                <span className={styles["appTitle"]}>Uptime Watcher</span>
+
+                <span className={styles.appTitle}>Uptime Watcher</span>
             </div>
-            <div className={styles["appBody"]}>
-                <div className={styles["appToolbar"]}>
+
+            <div className={styles.appBody}>
+                <div className={styles.appToolbar}>
                     <button
                         type="button"
-                        className={styles["addButton"]}
+                        className={styles.addButton}
                         onClick={handleDemoButtonClick}
                         title="Demo button - not functional"
                     >
                         + Add Site (Demo)
                     </button>
-                    <span className={styles["statusCount"]}>
+
+                    <span className={styles.statusCount}>
                         {sites.length} sites monitored
                     </span>
                 </div>
-                <div className={styles["siteList"]}>
+
+                <div className={styles.siteList}>
                     {sites.map((site) => (
-                        <div key={site.url} className={styles["siteItem"]}>
-                            <div className={styles["siteStatus"]}>
+                        <div key={site.url} className={styles.siteItem}>
+                            <div className={styles.siteStatus}>
                                 <span
-                                    className={styles["statusDot"]}
+                                    className={styles.statusDot}
                                     data-status={site.status}
                                 />
-                                <span className={styles["siteUrl"]}>
+
+                                <span className={styles.siteUrl}>
                                     {site.url}
                                 </span>
                             </div>
-                            <div className={styles["siteMetrics"]}>
-                                <span className={styles["responseTime"]}>
+
+                            <div className={styles.siteMetrics}>
+                                <span className={styles.responseTime}>
                                     {site.responseTime}
                                 </span>
-                                <span className={styles["uptime"]}>
+
+                                <span className={styles.uptime}>
                                     {site.uptime}
                                 </span>
                             </div>
@@ -195,75 +204,55 @@ const UIDemo = (): JSX.Element => {
  */
 
 const HomepageHeader = (): JSX.Element => (
-        <header className={styles["heroSection"]}>
-            <div className={styles["heroBackground"]} aria-hidden="true">
-                <span className={styles["heroGradientOrb"]} />
-                <span className={styles["auroraRibbon"]} />
-                <span className={styles["auroraVeil"]} />
-                <span className={styles["heroGridGlow"]} />
-                <span
-                    className={clsx(
-                        styles["starfieldLayer"],
-                        styles["starfieldLayerSlow"]
-                    )}
-                />
-                <span
-                    className={clsx(
-                        styles["starfieldLayer"],
-                        styles["starfieldLayerFast"]
-                    )}
-                />
-                <span
-                    className={clsx(
-                        styles["starfieldLayer"],
-                        styles["starfieldLayerPulse"]
-                    )}
-                />
-                <span className={styles["shootingStar"]} />
-            </div>
+        <header className={styles.heroSection}>
             <div className="container">
-                <div className={styles["heroContent"]}>
-                    <div className={styles["heroText"]}>
+                <div className={styles.heroContent}>
+                    <div className={styles.heroText}>
                         <Heading
                             as="h1"
-                            className={`${styles["heroTitle"]} gradient-text-animated`}
+                            className={`${styles.heroTitle} gradient-text-animated`}
                         >
                             Keep your sites alive.
                             <br />
-                            <span className={styles["accent"]}>
+                            <span className={styles.accent}>
                                 No drama, just monitoring.
                             </span>
                         </Heading>
-                        <p className={styles["heroSubtitle"]}>
+
+                        <p className={styles.heroSubtitle}>
                             A no-nonsense desktop app for developers and
                             sysadmins who need to know when their stuff breaks.
                             Built by someone who&apos;s been there at 3am.
                         </p>
-                        <div className={styles["heroCta"]}>
+
+                        <div className={styles.heroCta}>
                             <Link
                                 className={clsx(
                                     "button",
-                                    styles["primaryButton"],
+                                    styles.primaryButton,
                                     "liquid-button"
                                 )}
                                 href="https://github.com/Nick2bad4u/Uptime-Watcher/releases"
                             >
                                 Download Latest
                             </Link>
+
                             <Link
                                 className={clsx(
                                     "button",
-                                    styles["secondaryButton"],
+                                    styles.secondaryButton,
                                     "liquid-button"
                                 )}
                                 to="/docs"
                             >
                                 View Docs
                             </Link>
+
                             <GitHubStatsComponent />
                         </div>
                     </div>
-                    <div className={styles["heroDemo"]}>
+
+                    <div className={styles.heroDemo}>
                         <UIDemo />
                     </div>
                 </div>
@@ -272,72 +261,72 @@ const HomepageHeader = (): JSX.Element => (
     ),
     /**
      * Renders a section displaying real monitoring stories from users in the
-     * field. This component showcases testimonials about the effectiveness of
-     * Uptime Watcher.
+     * field. field. field. This component showcases testimonials about the
+     * effectiveness of Uptime Watcher.
      */
     RealTimeStatus = (): JSX.Element => (
-        <section className={styles["statusSection"]}>
+        <section className={styles.statusSection}>
             <div className="container">
-                <Heading as="h2" className={styles["sectionTitle"]}>
+                <Heading as="h2" className={styles.sectionTitle}>
                     🚨 Real monitoring stories from the field
                 </Heading>
-                <div className={styles["statusGrid"]}>
+
+                <div className={styles.statusGrid}>
                     <div
                         className={clsx(
-                            styles["statusCard"],
-                            styles["scrollRevealLeft"]
+                            styles.statusCard,
+                            styles.scrollRevealLeft
                         )}
                     >
-                        <div className={styles["statusHeader"]}>
-                            <span className={styles["statusIndicator"]}>
-                                🔴
-                            </span>
-                            <span className={styles["statusText"]}>
+                        <div className={styles.statusHeader}>
+                            <span className={styles.statusIndicator}>🔴</span>
+
+                            <span className={styles.statusText}>
                                 Saved my ass at 2am
                             </span>
                         </div>
-                        <p className={styles["statusDescription"]}>
+
+                        <p className={styles.statusDescription}>
                             &quot;Got woken up by notification that payment API
                             was down. Fixed it before any customers noticed.
                             This free tool saved my business.&quot; - DevOps
                             Engineer
                         </p>
                     </div>
+
                     <div
-                        className={clsx(
-                            styles["statusCard"],
-                            styles["scrollReveal"]
-                        )}
+                        className={clsx(styles.statusCard, styles.scrollReveal)}
                     >
-                        <div className={styles["statusHeader"]}>
-                            <span className={styles["statusIndicator"]}>
-                                🟢
-                            </span>
-                            <span className={styles["statusText"]}>
+                        <div className={styles.statusHeader}>
+                            <span className={styles.statusIndicator}>🟢</span>
+
+                            <span className={styles.statusText}>
                                 Finally, monitoring that works
                             </span>
                         </div>
-                        <p className={styles["statusDescription"]}>
+
+                        <p className={styles.statusDescription}>
                             &quot;No cloud dependencies, no monthly fees, no
                             bullshit. Just install and it works. Monitors 15
                             sites without breaking a sweat.&quot; - Solo Dev
                         </p>
                     </div>
+
                     <div
                         className={clsx(
-                            styles["statusCard"],
-                            styles["scrollRevealRight"]
+                            styles.statusCard,
+                            styles.scrollRevealRight
                         )}
                     >
-                        <div className={styles["statusHeader"]}>
-                            <span className={styles["statusIndicator"]}>
-                                🟡
-                            </span>
-                            <span className={styles["statusText"]}>
+                        <div className={styles.statusHeader}>
+                            <span className={styles.statusIndicator}>🟡</span>
+
+                            <span className={styles.statusText}>
                                 Lightweight beast
                             </span>
                         </div>
-                        <p className={styles["statusDescription"]}>
+
+                        <p className={styles.statusDescription}>
                             &quot;Runs on my old laptop, checks 50+ endpoints,
                             uses less RAM than my Slack app. How is this even
                             possible?&quot; - SysAdmin
@@ -346,48 +335,51 @@ const HomepageHeader = (): JSX.Element => (
                 </div>
             </div>
         </section>
-    );
-
-/**
- * Renders a section highlighting the technology stack and philosophy behind
- * Uptime Watcher. This component showcases the open-source nature, data
- * privacy, and performance focus of the app.
- *
- * @returns A section element highlighting the technical philosophy.
- */
-function TechStack(): JSX.Element {
-    return (
-        <section className={styles["techSection"]}>
+    ),
+    /**
+     * Renders a section highlighting the technology stack and philosophy behind
+     * Uptime Watcher. This component showcases the open-source nature, data
+     * privacy, and performance focus of the app.
+     */
+    TechStack = (): JSX.Element => (
+        <section className={styles.techSection}>
             <div className="container">
-                <div className={styles["techContent"]}>
-                    <div className={styles["techInfo"]}>
+                <div className={styles.techContent}>
+                    <div className={styles.techInfo}>
                         <Heading as="h2">
                             Built by developers, for developers
                         </Heading>
+
                         <p>
                             No marketing BS. This started because existing
                             solutions sucked - either too expensive, too
                             complicated, or required uploading your data to
                             someone else&apos;s cloud.
                         </p>
-                        <div className={styles["techFeatures"]}>
-                            <div className={styles["techFeature"]}>
+
+                        <div className={styles.techFeatures}>
+                            <div className={styles.techFeature}>
                                 <strong>🛠️ Actually Open Source</strong>
+
                                 <p>
                                     Real open source, not &quot;open core&quot;.
                                     Fork it, modify it, break it. Your choice.
                                 </p>
                             </div>
-                            <div className={styles["techFeature"]}>
+
+                            <div className={styles.techFeature}>
                                 <strong>💾 Your Data Stays Yours</strong>
+
                                 <p>
                                     SQLite database on your machine. No cloud,
                                     no tracking, no data mining your uptime
                                     patterns.
                                 </p>
                             </div>
-                            <div className={styles["techFeature"]}>
+
+                            <div className={styles.techFeature}>
                                 <strong>⚡ Stupid Fast</strong>
+
                                 <p>
                                     Electron + React + TypeScript. Modern stack,
                                     but optimized for performance, not just
@@ -396,47 +388,53 @@ function TechStack(): JSX.Element {
                             </div>
                         </div>
                     </div>
-                    <div className={styles["techCode"]}>
-                        <div className={styles["codeBlock"]}>
-                            <div className={styles["codeHeader"]}>
+
+                    <div className={styles.techCode}>
+                        <div className={styles.codeBlock}>
+                            <div className={styles.codeHeader}>
                                 <span>package.json</span>
-                                <div className={styles["codeActions"]}>
+
+                                <div className={styles.codeActions}>
                                     <button
                                         type="button"
-                                        className={styles["copyButton"]}
+                                        className={styles.copyButton}
                                         onClick={handleCopyCodeClick}
                                     >
                                         📋 Copy
                                     </button>
+
                                     {/* eslint-disable-next-line @docusaurus/no-html-links -- External GitHub link requires standard HTML anchor */}
                                     <a
                                         href="https://github.com/Nick2bad4u/Uptime-Watcher/blob/main/package.json"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className={styles["viewButton"]}
+                                        className={styles.viewButton}
                                     >
                                         🔗 View Full
                                     </a>
                                 </div>
                             </div>
-                            <pre className={styles["codeContent"]}>
+
+                            <pre className={styles.codeContent}>
                                 {`{
-  "name": "uptime-watcher",
-  "version": "12.5.0",
-  "description": "Desktop uptime monitoring",
-  "main": "dist/main.js",
-  "scripts": {
-    "start": "electron .",
-    "build": "npm run build:electron-vite",
-    "test": "vitest"
-  },
-  "dependencies": {
-    "electron": "^32.1.2",
-    "react": "^18.3.1",
-    "node-sqlite3-wasm": "^0.8.15",
-    "zustand": "^5.0.0"
-  },
-  "license": "Unlicense"
+    "name": "uptime-watcher",
+    "version": "19.0.0",
+    "description": "An Electron app to monitor website uptime status",
+    "main": "dist/main.js",
+    "scripts": {
+        "dev": "vite",
+        "electron-dev": "concurrently "npm run dev" "npm run electron -- {args}" --",
+        "build": "npm run build:electron-vite",
+        "test": "vitest",
+        "test:all": "npm run test && npm run test:storybook && npm run test:storybook:runner"
+    },
+    "dependencies": {
+        "electron": "^39.2.3",
+        "react": "^19.2.0",
+        "node-sqlite3-wasm": "^0.8.51",
+        "zustand": "^5.0.0"
+    },
+    "license": "UNLICENSED"
 }`}
                             </pre>
                         </div>
@@ -445,8 +443,6 @@ function TechStack(): JSX.Element {
             </div>
         </section>
     );
-}
-
 /**
  * Renders the main homepage layout for the Uptime Watcher documentation site.
  * This function composes the hero section, features, real-time status stories,
@@ -462,9 +458,12 @@ export default function Home(): JSX.Element {
             description="Open-source desktop app for monitoring website uptime. No cloud, no monthly fees, no drama."
         >
             <HomepageHeader />
+
             <main>
                 <HomepageFeatures />
+
                 <RealTimeStatus />
+
                 <TechStack />
             </main>
         </Layout>

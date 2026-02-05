@@ -5,7 +5,7 @@
         "allowSyntheticDefaultImports": true,
         "checkJs": false,
         "declaration": true,
-        "declarationDir": ".cache/builds/docusaurus/typedoc/types",
+        "declarationDir": "../../.cache/builds/docusaurus/typedoc/types",
         "declarationMap": true,
         "emitDeclarationOnly": true,
         "esModuleInterop": true,
@@ -33,28 +33,18 @@
         "noEmit": false,
         "outDir": "../../.cache/builds/docusaurus/typedoc",
         "paths": {
-            "@app/*": [
-                "../../src/*"
-            ],
-            "@assets/*": [
-                "../../assets/*"
-            ],
-            "@electron/*": [
-                "../../electron/*"
-            ],
-            "@shared/*": [
-                "../../shared/*"
-            ]
+            "@app/*": ["../../src/*"],
+            "@assets/*": ["../../assets/*"],
+            "@electron/*": ["../../electron/*"],
+            "@shared/*": ["../../shared/*"]
         },
         "resolveJsonModule": true,
         "skipLibCheck": true,
         "sourceMap": true,
         "strict": true,
         "target": "ESNext",
-        "tsBuildInfoFile": "../../.cache/typedoc.tsbuildinfo",
-        "types": [
-            "vite/client"
-        ]
+        "tsBuildInfoFile": "../../.cache/tsbuildinfo/tsconfig.docusaurus.typedoc.tsbuildinfo",
+        "types": ["vite/client"]
     },
     "exclude": [
         "../../node_modules/**",
@@ -97,6 +87,13 @@
         "../../electron/dist/**",
         "../../src/services/dist/**",
         "../../src/theme/dist/**"
+    ],
+    "files": [
+        "../../electron/importMeta.node.d.ts",
+        "../../electron/events/eventTypes.catalogue.core.d.ts",
+        "../../electron/events/eventTypes.catalogue.internalCacheDatabase.d.ts",
+        "../../electron/events/eventTypes.catalogue.internalMonitoringSite.d.ts",
+        "../../electron/events/eventTypes.catalogue.public.d.ts"
     ],
     "include": [
         "../../src/**/*.ts",

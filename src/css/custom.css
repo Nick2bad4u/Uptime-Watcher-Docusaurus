@@ -1,5 +1,5 @@
 /** eslint-disable css/use-baseline */
-/* stylelint-disable declaration-no-important, keyframes-name-pattern, scales/font-sizes, time-min-milliseconds, plugin/no-low-performance-animation-properties, plugin/use-logical-properties-and-values, plugin/use-logical-units, plugin/use-defensive-css, declaration-block-no-redundant-longhand-properties, order/properties-order, no-duplicate-selectors, no-descending-specificity, selector-max-specificity, selector-not-notation, csstools/use-nesting, a11y/media-prefers-reduced-motion -- Docusaurus CSS patterns provide explicit reduced-motion fallbacks */
+/* stylelint-disable declaration-no-important, keyframes-name-pattern, scales/font-sizes, time-min-milliseconds, plugin/no-low-performance-animation-properties, plugin/use-logical-properties-and-values, plugin/use-logical-units, declaration-block-no-redundant-longhand-properties, order/properties-order, no-duplicate-selectors, no-descending-specificity, selector-max-specificity, selector-not-notation, csstools/use-nesting, a11y/media-prefers-reduced-motion -- Docusaurus CSS patterns provide explicit reduced-motion fallbacks */
 
 /**
  * Global CSS overrides for Docusaurus documentation site.
@@ -96,6 +96,20 @@
     --container-sm: 768px;
     --container-md: 1024px;
     --container-lg: 1200px;
+}
+
+/* Hide the global copy-page button on the landing page only.
+   Docs, blog, and other routes keep the button visible. */
+
+/* Target both class and ID selectors to ensure the button is hidden on homepage */
+[class*="page-home"] .copy-page-button__container,
+[class*="page-home"] #copy-page-button-container,
+body:not([class*="docs-"]):not([class*="blog-"]) .copy-page-button__container,
+body:not([class*="docs-"]):not([class*="blog-"]) #copy-page-button-container {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
 }
 
 /* Dark mode palette overrides: These variables are redefined to ensure optimal contrast, readability, and visual accessibility for users in dark mode.
@@ -209,6 +223,10 @@
 
 .sb-cat-tsdoc > .menu__list-item-collapsible .menu__link {
     border-inline-start: 4px solid #d627e3;
+}
+
+.sb-cat-blog > .menu__list-item-collapsible .menu__link {
+    border-inline-start: 4px solid #2563eb;
 }
 
 /* Subtle hover elevation */
@@ -369,6 +387,10 @@
     border-color: #d627e3;
 }
 
+[data-theme="dark"] .sb-cat-blog > .menu__list-item-collapsible .menu__link {
+    border-color: #60a5fa;
+}
+
 /* Overview doc styling */
 .sb-doc-overview .theme-doc-sidebar-item-link a {
     font-weight: 700;
@@ -404,6 +426,10 @@
 
 .menu__list-item[data-badge="docs"] > .menu__link::after {
     background: #d627e3;
+}
+
+.menu__list-item[data-badge="blog"] > .menu__link::after {
+    background: #2563eb;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -4118,18 +4144,25 @@ html {
 .navbar-sidebar {
     position: fixed !important;
     z-index: calc(var(--ifm-z-index-fixed) + 10) !important;
+
     /* Fix overflow that might clip interactive elements */
     overflow-x: visible !important;
     overflow-y: auto !important;
+    overscroll-behavior: contain !important;
+    scrollbar-gutter: stable !important;
+
     /* Ensure pointer events work */
     pointer-events: auto !important;
+
     /* Proper positioning and dimensions */
     top: 0 !important;
     bottom: 0 !important;
     width: var(--ifm-navbar-sidebar-width) !important;
+
     /* Use top/bottom instead of explicit height for better control */
     height: 100vh !important;
     max-height: 100vh !important;
+
     /* Ensure content fits properly */
     display: flex !important;
     flex-direction: column !important;
@@ -4205,6 +4238,8 @@ html {
     .navbar-sidebar__items {
         flex: 1 !important;
         overflow-y: auto !important;
+        overscroll-behavior: contain !important;
+        scrollbar-gutter: stable !important;
         max-height: calc(100vh - var(--ifm-navbar-height)) !important;
     }
 
@@ -4354,6 +4389,23 @@ html {
     .navbar__items--right {
         gap: 0.25rem;
     }
+}
+
+/* ==================================================
+ * 🏠 HOMEPAGE-SPECIFIC MOBILE FIXES
+ * ================================================== */
+
+/**
+ * Hide the navbar sidebar "Back to main menu" panel on non-documentation pages.
+ * This panel is only relevant for docs pages with nested sidebar navigation.
+ * On the homepage and other non-doc pages, it creates visual noise.
+ */
+body:not([class*="docs-"]):not([class*="blog-"]) .navbar-sidebar__item.menu,
+body:not([class*="docs-"]):not([class*="blog-"]) .navbar-sidebar__back,
+body:not([class*="docs-"]):not([class*="blog-"])
+    .theme-layout-navbar-sidebar-panel {
+    display: none !important;
+    visibility: hidden !important;
 }
 
 /* Accessibility: Individual reduced motion media queries for each selector group */
