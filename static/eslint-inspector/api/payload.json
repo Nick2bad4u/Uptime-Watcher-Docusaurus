@@ -8474,6 +8474,7 @@
         "@eslint-react/no-default-props": "error",
         "@eslint-react/no-direct-mutation-state": "error",
         "@eslint-react/no-forward-ref": "warn",
+        "@eslint-react/no-implicit-key": "warn",
         "@eslint-react/no-missing-key": "error",
         "@eslint-react/no-nested-component-definitions": "warn",
         "@eslint-react/no-nested-lazy-component-declarations": "error",
@@ -8514,7 +8515,6 @@
         "@eslint-react/dom/no-string-style-prop": "error",
         "@eslint-react/dom/no-unknown-property": "warn",
         "@eslint-react/jsx-no-undef": "warn",
-        "@eslint-react/no-implicit-key": "error",
         "@eslint-react/no-leaked-conditional-rendering": "warn",
         "sort-class-members/sort-class-members": [
           "warn",
@@ -12257,6 +12257,7 @@
         "@eslint-react/no-default-props": "error",
         "@eslint-react/no-direct-mutation-state": "error",
         "@eslint-react/no-forward-ref": "warn",
+        "@eslint-react/no-implicit-key": "warn",
         "@eslint-react/no-missing-key": "error",
         "@eslint-react/no-nested-component-definitions": "warn",
         "@eslint-react/no-nested-lazy-component-declarations": "error",
@@ -12297,7 +12298,6 @@
         "@eslint-react/dom/no-string-style-prop": "off",
         "@eslint-react/dom/no-unknown-property": "warn",
         "@eslint-react/jsx-no-undef": "warn",
-        "@eslint-react/no-implicit-key": "error",
         "@eslint-react/no-leaked-conditional-rendering": "warn",
         "sort-class-members/sort-class-members": [
           "warn",
@@ -15149,6 +15149,7 @@
         "@eslint-react/no-default-props": "error",
         "@eslint-react/no-direct-mutation-state": "error",
         "@eslint-react/no-forward-ref": "warn",
+        "@eslint-react/no-implicit-key": "warn",
         "@eslint-react/no-missing-key": "error",
         "@eslint-react/no-nested-component-definitions": "warn",
         "@eslint-react/no-nested-lazy-component-declarations": "error",
@@ -15189,7 +15190,6 @@
         "@eslint-react/dom/no-string-style-prop": "off",
         "@eslint-react/dom/no-unknown-property": "warn",
         "@eslint-react/jsx-no-undef": "warn",
-        "@eslint-react/no-implicit-key": "error",
         "@eslint-react/no-leaked-conditional-rendering": "warn",
         "sort-class-members/sort-class-members": [
           "warn",
@@ -18907,6 +18907,7 @@
         "@eslint-react/no-default-props": "error",
         "@eslint-react/no-direct-mutation-state": "error",
         "@eslint-react/no-forward-ref": "warn",
+        "@eslint-react/no-implicit-key": "warn",
         "@eslint-react/no-missing-key": "error",
         "@eslint-react/no-nested-component-definitions": "warn",
         "@eslint-react/no-nested-lazy-component-declarations": "error",
@@ -18947,7 +18948,6 @@
         "@eslint-react/dom/no-string-style-prop": "off",
         "@eslint-react/dom/no-unknown-property": "warn",
         "@eslint-react/jsx-no-undef": "warn",
-        "@eslint-react/no-implicit-key": "error",
         "@eslint-react/no-leaked-conditional-rendering": "warn",
         "sort-class-members/sort-class-members": [
           "warn",
@@ -54704,7 +54704,7 @@
     "@eslint-react/no-implicit-key": {
       "type": "problem",
       "docs": {
-        "description": "Prevents implicitly passing the 'key' prop to components.",
+        "description": "Prevents 'key' from not being explicitly specified (e.g., spreading 'key' from objects).",
         "url": "https://eslint-react.xyz/docs/rules/no-implicit-key"
       },
       "name": "@eslint-react/no-implicit-key",
@@ -54844,6 +54844,15 @@
         "url": "https://eslint-react.xyz/docs/rules/no-unnecessary-use-prefix"
       },
       "name": "@eslint-react/no-unnecessary-use-prefix",
+      "plugin": "@eslint-react"
+    },
+    "@eslint-react/no-unnecessary-use-ref": {
+      "type": "problem",
+      "docs": {
+        "description": "Disallows unnecessary usage of 'useRef'.",
+        "url": "https://eslint-react.xyz/docs/rules/no-unnecessary-use-ref"
+      },
+      "name": "@eslint-react/no-unnecessary-use-ref",
       "plugin": "@eslint-react"
     },
     "@eslint-react/no-unsafe-component-will-mount": {
@@ -55046,15 +55055,6 @@
       },
       "fixable": "code",
       "name": "@eslint-react/no-string-refs",
-      "plugin": "@eslint-react"
-    },
-    "@eslint-react/no-unnecessary-use-ref": {
-      "type": "problem",
-      "docs": {
-        "description": "Disallows unnecessary usage of 'useRef'.",
-        "url": "https://eslint-react.xyz/docs/rules/no-unnecessary-use-ref"
-      },
-      "name": "@eslint-react/no-unnecessary-use-ref",
       "plugin": "@eslint-react"
     },
     "@eslint-react/dom/no-dangerously-set-innerhtml": {
@@ -71041,19 +71041,6 @@
       ]
     },
     {
-      "filepath": "docs/docusaurus/static/manifest.json",
-      "globs": [
-        "docs/**",
-        "**/*.json",
-        "**/**"
-      ],
-      "configs": [
-        59,
-        107,
-        108
-      ]
-    },
-    {
       "filepath": "docs/docusaurus/stylelint.config.mjs",
       "globs": [
         "**/*.mjs",
@@ -76384,38 +76371,6 @@
     },
     {
       "filepath": "electron/services/ipc/utils.ts",
-      "globs": [
-        "**/*.?([cm])[jt]s?(x)",
-        "electron/**/*.{ts,tsx}",
-        "**/*.{ts,tsx}",
-        "electron/services/**/*.{ts,tsx}",
-        "**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "electron/**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/**"
-      ],
-      "configs": [
-        18,
-        24,
-        27,
-        28,
-        29,
-        33,
-        38,
-        39,
-        40,
-        52,
-        66,
-        104,
-        105,
-        106,
-        107,
-        108,
-        109,
-        113
-      ]
-    },
-    {
-      "filepath": "electron/services/ipc/validators/IpcValidators.ts",
       "globs": [
         "**/*.?([cm])[jt]s?(x)",
         "electron/**/*.{ts,tsx}",
@@ -98557,59 +98512,7 @@
       ]
     },
     {
-      "filepath": "src/app/loading/useDelayedLoadingOverlay.ts",
-      "globs": [
-        "**/*.?([cm])[jt]s?(x)",
-        "src/**/*.{ts,tsx}",
-        "**/*.{ts,tsx}",
-        "src/**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/**"
-      ],
-      "configs": [
-        18,
-        24,
-        28,
-        29,
-        31,
-        33,
-        40,
-        52,
-        65,
-        106,
-        107,
-        108,
-        109
-      ]
-    },
-    {
       "filepath": "src/app/sidebar/sidebarMediaQueryListener.ts",
-      "globs": [
-        "**/*.?([cm])[jt]s?(x)",
-        "src/**/*.{ts,tsx}",
-        "**/*.{ts,tsx}",
-        "src/**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/**"
-      ],
-      "configs": [
-        18,
-        24,
-        28,
-        29,
-        31,
-        33,
-        40,
-        52,
-        65,
-        106,
-        107,
-        108,
-        109
-      ]
-    },
-    {
-      "filepath": "src/app/sidebar/useCompactSidebarAutoDismiss.ts",
       "globs": [
         "**/*.?([cm])[jt]s?(x)",
         "src/**/*.{ts,tsx}",
@@ -99021,111 +98924,7 @@
       ]
     },
     {
-      "filepath": "src/components/AddSiteForm/utils/addModeValidation.ts",
-      "globs": [
-        "**/*.?([cm])[jt]s?(x)",
-        "src/**/*.{ts,tsx}",
-        "**/*.{ts,tsx}",
-        "src/**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/**"
-      ],
-      "configs": [
-        18,
-        24,
-        28,
-        29,
-        31,
-        33,
-        40,
-        52,
-        65,
-        106,
-        107,
-        108,
-        109
-      ]
-    },
-    {
-      "filepath": "src/components/AddSiteForm/utils/dynamicFieldChangeHandlers.ts",
-      "globs": [
-        "**/*.?([cm])[jt]s?(x)",
-        "src/**/*.{ts,tsx}",
-        "**/*.{ts,tsx}",
-        "src/**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/**"
-      ],
-      "configs": [
-        18,
-        24,
-        28,
-        29,
-        31,
-        33,
-        40,
-        52,
-        65,
-        106,
-        107,
-        108,
-        109
-      ]
-    },
-    {
       "filepath": "src/components/AddSiteForm/utils/helperBullets.ts",
-      "globs": [
-        "**/*.?([cm])[jt]s?(x)",
-        "src/**/*.{ts,tsx}",
-        "**/*.{ts,tsx}",
-        "src/**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/**"
-      ],
-      "configs": [
-        18,
-        24,
-        28,
-        29,
-        31,
-        33,
-        40,
-        52,
-        65,
-        106,
-        107,
-        108,
-        109
-      ]
-    },
-    {
-      "filepath": "src/components/AddSiteForm/utils/monitorValidationBuilders.ts",
-      "globs": [
-        "**/*.?([cm])[jt]s?(x)",
-        "src/**/*.{ts,tsx}",
-        "**/*.{ts,tsx}",
-        "src/**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/**"
-      ],
-      "configs": [
-        18,
-        24,
-        28,
-        29,
-        31,
-        33,
-        40,
-        52,
-        65,
-        106,
-        107,
-        108,
-        109
-      ]
-    },
-    {
-      "filepath": "src/components/AddSiteForm/utils/valueNormalization.ts",
       "globs": [
         "**/*.?([cm])[jt]s?(x)",
         "src/**/*.{ts,tsx}",
@@ -101251,58 +101050,6 @@
       ]
     },
     {
-      "filepath": "src/components/Settings/utils/sqliteRestorePayload.ts",
-      "globs": [
-        "**/*.?([cm])[jt]s?(x)",
-        "src/**/*.{ts,tsx}",
-        "**/*.{ts,tsx}",
-        "src/**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/**"
-      ],
-      "configs": [
-        18,
-        24,
-        28,
-        29,
-        31,
-        33,
-        40,
-        52,
-        65,
-        106,
-        107,
-        108,
-        109
-      ]
-    },
-    {
-      "filepath": "src/components/Settings/utils/volumeNormalization.ts",
-      "globs": [
-        "**/*.?([cm])[jt]s?(x)",
-        "src/**/*.{ts,tsx}",
-        "**/*.{ts,tsx}",
-        "src/**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/**"
-      ],
-      "configs": [
-        18,
-        24,
-        28,
-        29,
-        31,
-        33,
-        40,
-        52,
-        65,
-        106,
-        107,
-        108,
-        109
-      ]
-    },
-    {
       "filepath": "src/components/SiteDetails/MonitoringStatusDisplay.tsx",
       "globs": [
         "**/*.?([cm])[jt]s?(x)",
@@ -101463,58 +101210,6 @@
         40,
         52,
         62,
-        65,
-        106,
-        107,
-        108,
-        109
-      ]
-    },
-    {
-      "filepath": "src/components/SiteDetails/addSiteForm/addSiteFormDefaults.ts",
-      "globs": [
-        "**/*.?([cm])[jt]s?(x)",
-        "src/**/*.{ts,tsx}",
-        "**/*.{ts,tsx}",
-        "src/**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/**"
-      ],
-      "configs": [
-        18,
-        24,
-        28,
-        29,
-        31,
-        33,
-        40,
-        52,
-        65,
-        106,
-        107,
-        108,
-        109
-      ]
-    },
-    {
-      "filepath": "src/components/SiteDetails/addSiteForm/addSiteFormResets.ts",
-      "globs": [
-        "**/*.?([cm])[jt]s?(x)",
-        "src/**/*.{ts,tsx}",
-        "**/*.{ts,tsx}",
-        "src/**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/**"
-      ],
-      "configs": [
-        18,
-        24,
-        28,
-        29,
-        31,
-        33,
-        40,
-        52,
         65,
         106,
         107,
@@ -102259,34 +101954,6 @@
       ]
     },
     {
-      "filepath": "src/components/Updates/UpdateNotificationBanner.tsx",
-      "globs": [
-        "**/*.?([cm])[jt]s?(x)",
-        "src/**/*.{ts,tsx}",
-        "**/*.{ts,tsx}",
-        "src/**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/*.{tsx,jsx}",
-        "**/**"
-      ],
-      "configs": [
-        18,
-        24,
-        28,
-        29,
-        31,
-        33,
-        40,
-        52,
-        62,
-        65,
-        106,
-        107,
-        108,
-        109
-      ]
-    },
-    {
       "filepath": "src/components/common/ConfirmDialog/ConfirmDialog.tsx",
       "globs": [
         "**/*.?([cm])[jt]s?(x)",
@@ -102375,32 +102042,6 @@
         40,
         52,
         62,
-        65,
-        106,
-        107,
-        108,
-        109
-      ]
-    },
-    {
-      "filepath": "src/components/common/GalaxyBackground/galaxyBackgroundUtils.ts",
-      "globs": [
-        "**/*.?([cm])[jt]s?(x)",
-        "src/**/*.{ts,tsx}",
-        "**/*.{ts,tsx}",
-        "src/**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/**"
-      ],
-      "configs": [
-        18,
-        24,
-        28,
-        29,
-        31,
-        33,
-        40,
-        52,
         65,
         106,
         107,
@@ -104119,34 +103760,6 @@
       ]
     },
     {
-      "filepath": "src/stores/cloud/utils/cloudStoreNotifications.ts",
-      "globs": [
-        "**/*.?([cm])[jt]s?(x)",
-        "src/**/*.{ts,tsx}",
-        "**/*.{ts,tsx}",
-        "src/**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "src/stores/**/*.{ts,tsx}",
-        "**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/**"
-      ],
-      "configs": [
-        18,
-        24,
-        28,
-        29,
-        31,
-        32,
-        33,
-        40,
-        52,
-        65,
-        106,
-        107,
-        108,
-        109
-      ]
-    },
-    {
       "filepath": "src/stores/error/ErrorBoundary.tsx",
       "globs": [
         "**/*.?([cm])[jt]s?(x)",
@@ -104994,34 +104607,6 @@
     },
     {
       "filepath": "src/stores/sites/utils/statusUpdateListeners.ts",
-      "globs": [
-        "**/*.?([cm])[jt]s?(x)",
-        "src/**/*.{ts,tsx}",
-        "**/*.{ts,tsx}",
-        "src/**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "src/stores/**/*.{ts,tsx}",
-        "**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/**"
-      ],
-      "configs": [
-        18,
-        24,
-        28,
-        29,
-        31,
-        32,
-        33,
-        40,
-        52,
-        65,
-        106,
-        107,
-        108,
-        109
-      ]
-    },
-    {
-      "filepath": "src/stores/sites/utils/statusUpdateManagerSingleton.ts",
       "globs": [
         "**/*.?([cm])[jt]s?(x)",
         "src/**/*.{ts,tsx}",
@@ -109929,38 +109514,6 @@
         40,
         52,
         62,
-        69,
-        106,
-        107,
-        108,
-        110,
-        111
-      ]
-    },
-    {
-      "filepath": "src/test/formatByteSize.test.ts",
-      "globs": [
-        "**/*.?([cm])[jt]s?(x)",
-        "src/**/*.{ts,tsx}",
-        "**/*.{ts,tsx}",
-        "src/test/**/*",
-        "**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/test/**",
-        "**/*.{spec,test}.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "src/test/**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "src/**/*.{spec,test}.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/**",
-        "src/test/**",
-        "**/*.test.{ts,tsx}",
-        "src/test/**/*.{ts,tsx}"
-      ],
-      "configs": [
-        18,
-        24,
-        28,
-        29,
-        40,
-        52,
         69,
         106,
         107,
@@ -117493,38 +117046,6 @@
       ]
     },
     {
-      "filepath": "src/test/volumeNormalization.test.ts",
-      "globs": [
-        "**/*.?([cm])[jt]s?(x)",
-        "src/**/*.{ts,tsx}",
-        "**/*.{ts,tsx}",
-        "src/test/**/*",
-        "**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/test/**",
-        "**/*.{spec,test}.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "src/test/**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "src/**/*.{spec,test}.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/**",
-        "src/test/**",
-        "**/*.test.{ts,tsx}",
-        "src/test/**/*.{ts,tsx}"
-      ],
-      "configs": [
-        18,
-        24,
-        28,
-        29,
-        40,
-        52,
-        69,
-        106,
-        107,
-        108,
-        110,
-        111
-      ]
-    },
-    {
       "filepath": "src/test/working-utility-coverage.test.ts",
       "globs": [
         "**/*.?([cm])[jt]s?(x)",
@@ -118669,32 +118190,6 @@
       ]
     },
     {
-      "filepath": "src/utils/formatting/formatByteSize.ts",
-      "globs": [
-        "**/*.?([cm])[jt]s?(x)",
-        "src/**/*.{ts,tsx}",
-        "**/*.{ts,tsx}",
-        "src/**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/**"
-      ],
-      "configs": [
-        18,
-        24,
-        28,
-        29,
-        31,
-        33,
-        40,
-        52,
-        65,
-        106,
-        107,
-        108,
-        109
-      ]
-    },
-    {
       "filepath": "src/utils/icons.ts",
       "globs": [
         "**/*.?([cm])[jt]s?(x)",
@@ -118826,110 +118321,6 @@
     },
     {
       "filepath": "src/utils/monitorValidation.ts",
-      "globs": [
-        "**/*.?([cm])[jt]s?(x)",
-        "src/**/*.{ts,tsx}",
-        "**/*.{ts,tsx}",
-        "src/**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/**"
-      ],
-      "configs": [
-        18,
-        24,
-        28,
-        29,
-        31,
-        33,
-        40,
-        52,
-        65,
-        106,
-        107,
-        108,
-        109
-      ]
-    },
-    {
-      "filepath": "src/utils/monitorValidation/formFieldValidators.ts",
-      "globs": [
-        "**/*.?([cm])[jt]s?(x)",
-        "src/**/*.{ts,tsx}",
-        "**/*.{ts,tsx}",
-        "src/**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/**"
-      ],
-      "configs": [
-        18,
-        24,
-        28,
-        29,
-        31,
-        33,
-        40,
-        52,
-        65,
-        106,
-        107,
-        108,
-        109
-      ]
-    },
-    {
-      "filepath": "src/utils/monitorValidation/monitorFormValidators.ts",
-      "globs": [
-        "**/*.?([cm])[jt]s?(x)",
-        "src/**/*.{ts,tsx}",
-        "**/*.{ts,tsx}",
-        "src/**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/**"
-      ],
-      "configs": [
-        18,
-        24,
-        28,
-        29,
-        31,
-        33,
-        40,
-        52,
-        65,
-        106,
-        107,
-        108,
-        109
-      ]
-    },
-    {
-      "filepath": "src/utils/monitorValidation/monitorValidationInternals.ts",
-      "globs": [
-        "**/*.?([cm])[jt]s?(x)",
-        "src/**/*.{ts,tsx}",
-        "**/*.{ts,tsx}",
-        "src/**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/*.{ts,tsx,mts,cts,mjs,js,jsx,cjs}",
-        "**/**"
-      ],
-      "configs": [
-        18,
-        24,
-        28,
-        29,
-        31,
-        33,
-        40,
-        52,
-        65,
-        106,
-        107,
-        108,
-        109
-      ]
-    },
-    {
-      "filepath": "src/utils/monitorValidation/monitorValidationTypes.ts",
       "globs": [
         "**/*.?([cm])[jt]s?(x)",
         "src/**/*.{ts,tsx}",
@@ -122654,7 +122045,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1770320305951,
+    "lastUpdate": 1770322718025,
     "basePath": "",
     "configPath": ""
   }
