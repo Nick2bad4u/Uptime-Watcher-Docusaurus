@@ -19,18 +19,22 @@
         "type": "git",
         "url": "git+https://github.com/Nick2bad4u/Uptime-Watcher-Docusaurus.git"
     },
-    "license": "UnLicense",
+    "license": "UNLICENSED",
     "author": "Nick2bad4u",
-    "contributors": [],
-    "main": "src/index.tsx",
-    "directories": {},
-    "files": [],
+    "contributors": [
+        {
+            "name": "Nick2bad4u",
+            "url": "https://github.com/Nick2bad4u"
+        }
+    ],
     "scripts": {
         "build": "npm run generate-docs && cd ../../ && npm run build:eslint-inspector && cd docs/docusaurus && docusaurus build",
         "build:default": "docusaurus build",
         "build:fast": "cross-env DOCUSAURUS_ENABLE_EXPERIMENTAL=true docusaurus build",
         "build:local": "npm run generate-docs:local && cd ../../ && npm run build:eslint-inspector && cd docs/docusaurus && docusaurus build",
         "clear": "docusaurus clear",
+        "css:types": "tcm src -p \"**/*.module.css\"",
+        "css:types:check": "tcm src -p \"**/*.module.css\" -l",
         "deploy": "docusaurus deploy",
         "docusaurus": "docusaurus",
         "generate-docs": "typedoc --options typedoc.config.json",
@@ -38,17 +42,17 @@
         "generate-docs:electron": "typedoc --options ../../typedoc.electron.json",
         "generate-docs:local": "typedoc --options typedoc.local.config.json",
         "lint": "cd ../../ && eslint --cache docs/docusaurus",
-        "lint:css": "stylelint . --cache --config stylelint.config.mjs --ignore-path .stylelintignore --cache-strategy content --cache-location stylelintcache --formatter=verbose",
-        "lint:css:fix": "stylelint . --cache --config stylelint.config.mjs --ignore-path .stylelintignore --cache-strategy content --cache-location stylelintcache --formatter=verbose --fix",
+        "lint:css": "stylelint . --cache --config ../../stylelint.config.mjs --ignore-path .stylelintignore --cache-strategy content --cache-location stylelintcache --formatter=verbose",
+        "lint:css:fix": "stylelint . --cache --config ../../stylelint.config.mjs --ignore-path .stylelintignore --cache-strategy content --cache-location stylelintcache --formatter=verbose --fix",
         "lint:fix": "cd ../../ && eslint --cache docs/docusaurus --fix",
         "serve": "docusaurus serve",
         "start": "docusaurus start",
         "swizzle": "docusaurus swizzle",
-        "typecheck": "tsc --project tsconfig.json --noEmit",
+        "type-check": "npm run css:types:check && tsc --project tsconfig.json --noEmit",
+        "typecheck": "npm run css:types:check && tsc --project tsconfig.json --noEmit",
         "write-heading-ids": "docusaurus write-heading-ids",
         "write-translations": "docusaurus write-translations"
     },
-    "config": {},
     "browserslist": {
         "development": [
             "last 3 chrome version",
@@ -65,16 +69,14 @@
         "@docusaurus/core": "^3.9.2",
         "@docusaurus/faster": "^3.9.2",
         "@docusaurus/plugin-content-docs": "^3.9.2",
+        "@docusaurus/plugin-pwa": "^3.9.2",
         "@docusaurus/preset-classic": "^3.9.2",
         "@docusaurus/theme-live-codeblock": "^3.9.2",
         "@docusaurus/theme-mermaid": "^3.9.2",
         "@docusaurus/theme-search-algolia": "^3.9.2",
         "@docusaurus/types": "^3.9.2",
-        "@easyops-cn/docusaurus-search-local": "^0.52.3",
+        "@easyops-cn/docusaurus-search-local": "^0.53.0",
         "@eslint/config-inspector": "^1.4.2",
-        "@grnet/docusaurus-glossary-view": "^2.0.0-rc.2",
-        "@grnet/docusaurus-term-preview": "^2.0.0-rc.2",
-        "@grnet/docusaurus-terminology": "^2.0.0-rc.2",
         "@mdx-js/react": "^3.1.1",
         "clsx": "^2.1.1",
         "docusaurus-plugin-copy-page-button": "^0.3.5",
@@ -90,14 +92,15 @@
         "@docusaurus/eslint-plugin": "^3.9.2",
         "@docusaurus/module-type-aliases": "^3.9.2",
         "@docusaurus/tsconfig": "^3.9.2",
-        "@types/react": "^19.2.11",
+        "@types/react": "^19.2.13",
         "@types/react-dom": "^19.2.3",
         "cross-env": "^10.1.0",
+        "typed-css-modules": "^0.9.1",
         "typedoc": "^0.28.16",
         "typedoc-plugin-coverage": "^4.0.2",
         "typedoc-plugin-dt-links": "^2.0.40",
         "typedoc-plugin-external-package-links": "^0.2.0",
-        "typedoc-plugin-markdown": "^4.9.0",
+        "typedoc-plugin-markdown": "^4.10.0",
         "typedoc-plugin-mdn-links": "^5.1.1",
         "typedoc-plugin-missing-exports": "^4.1.2",
         "typedoc-plugin-remark": "^2.0.1",
@@ -105,12 +108,8 @@
         "typedoc-plugin-replace-text": "^4.2.0",
         "typescript": "^5.9.3"
     },
-    "bundleDependencies": [],
     "engines": {
         "node": ">=18.0"
     },
-    "os": [],
-    "cpu": [],
-    "preferGlobal": false,
-    "publishConfig": {}
+    "preferGlobal": false
 }

@@ -1,0 +1,1 @@
+var r=Object.defineProperty;var t=(e,f)=>r(e,"name",{value:f,configurable:!0});const n=typeof TextEncoder>"u"?null:new TextEncoder;function u(e){return n?n.encode(e).length:typeof Buffer<"u"&&typeof Buffer.byteLength=="function"?Buffer.byteLength(e,"utf8"):e.length*2}t(u,"getUtfByteLength");export{u as g};

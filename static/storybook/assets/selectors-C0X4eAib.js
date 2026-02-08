@@ -1,0 +1,1 @@
+var a=Object.defineProperty;var s=(r,o)=>a(r,"name",{value:o,configurable:!0});const t=s(r=>r.isLoading,"selectErrorIsLoading"),c=s(r=>r.lastError,"selectLastError"),l=s(r=>r.clearError,"selectClearError");export{t as a,c as b,l as s};

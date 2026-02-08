@@ -1,0 +1,1 @@
+var n=Object.defineProperty;var t=(o,i)=>n(o,"name",{value:i,configurable:!0});const m=t((o=300)=>new Promise(i=>{const e=window.setTimeout(()=>{window.clearTimeout(e),i()},o)}),"waitForAnimation");export{m as w};

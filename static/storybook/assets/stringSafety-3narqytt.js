@@ -1,0 +1,1 @@
+var c=Object.defineProperty;var n=(o,t)=>c(o,"name",{value:t,configurable:!0});function i(o){for(const t of o){const r=t.codePointAt(0);if(r!==void 0&&(r<32||r===127))return!0}return!1}n(i,"hasAsciiControlCharacters");export{i as h};
