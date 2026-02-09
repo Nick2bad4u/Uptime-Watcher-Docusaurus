@@ -1,1 +1,0 @@
-var n=Object.defineProperty;var o=(r,t)=>n(r,"name",{value:t,configurable:!0});import"./iframe-MD7yCyl4.js";import{r as i}from"./modalHandlers-Dc2xPs2j.js";function a(){return e}o(a,"useConfirmDialog");function e(r){return i(r)}o(e,"_temp");export{a as u};

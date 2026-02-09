@@ -1,0 +1,1 @@
+var p=Object.defineProperty;var t=(e,a)=>p(e,"name",{value:a,configurable:!0});import"./utfByteLength-Dk-7ijHQ.js";import{l}from"./iframe-DuEuG6JD.js";const o=t(e=>{const a=e.replaceAll(/[\s%]/gu,""),r=Number.parseFloat(a);return Number.isNaN(r)?(l.warn("Invalid uptime value received",{uptime:e}),0):Math.min(100,Math.max(0,r))},"parseUptimeValue");export{o as p};
