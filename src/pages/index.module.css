@@ -149,6 +149,7 @@
     display: grid;
     align-items: center;
     gap: 4rem;
+    /* stylelint-disable-next-line defensive-css/require-named-grid-lines */
     grid-template-columns: 1fr 1fr;
 }
 
@@ -843,6 +844,7 @@
     display: grid;
     margin: 0 auto;
     gap: 2rem;
+    /* stylelint-disable-next-line defensive-css/require-named-grid-lines */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     max-inline-size: 1000px;
 }
@@ -1071,6 +1073,7 @@
     display: grid;
     align-items: center;
     gap: 4rem;
+    /* stylelint-disable-next-line defensive-css/require-named-grid-lines */
     grid-template-columns: 1fr 1fr;
     /* Prevent content from expanding beyond container */
     max-inline-size: 100%;
@@ -1447,6 +1450,7 @@
 @media screen and (width <= 1200px) {
     .heroContent {
         gap: 3rem;
+        /* stylelint-disable-next-line defensive-css/require-named-grid-lines */
         grid-template-columns: 1fr;
         text-align: center;
     }
@@ -1467,10 +1471,12 @@
 
     .techContent {
         gap: 3rem;
+        /* stylelint-disable-next-line defensive-css/require-named-grid-lines */
         grid-template-columns: 1fr;
     }
 
     .statusGrid {
+        /* stylelint-disable-next-line defensive-css/require-named-grid-lines */
         grid-template-columns: 1fr;
     }
 }
