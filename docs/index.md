@@ -3,7 +3,7 @@
 <div align="center"><a href="https://github.com/Nick2bad4u/Uptime-Watcher/releases">
   <img src="https://img.shields.io/badge/version-19.1.0-blue.svg" alt="Version">
 </a>
-<a href="_media/LICENSE">
+<a href="https://github.com/Nick2bad4u/Uptime-Watcher/blob/main/LICENSE">
   <img src="https://img.shields.io/badge/license-Unlicense-green.svg" alt="License">
 </a>
 <a href="https://www.electronjs.org/">
@@ -47,7 +47,7 @@
 <comment> Application screenshots will be added here once available </comment></div>
 
 <div align="center">
-  <img src="_media/UptimeWatcherMascot.png" alt="Uptime Watcher Mascot" width="50%">
+  <img src="https://raw.githubusercontent.com/Nick2bad4u/Uptime-Watcher/main/assets/UptimeWatcherMascot.png" alt="Uptime Watcher Mascot" width="50%">
 </div>
 
 ## What is Uptime Watcher?
@@ -219,7 +219,7 @@ npm run dist
 | <strong>npm</strong>     | 11.6.4+ (included with Node.js) | <a href="https://www.npmjs.com/">Docs</a>   |
 | <strong>Git</strong>     | Latest version                  | <a href="https://git-scm.com/">Download</a> |
 
-\> <strong>💡 Tip</strong>: Check out the <a href="documents/Developer-Quick-Start-Guide.md">Developer Quick Start Guide</a> for detailed setup instructions and architecture overview.
+> **💡 Tip**: Check out the [Developer Quick Start Guide](./documents/docs/Guides/DEVELOPER_QUICK_START.md) for detailed setup instructions and architecture overview.
 
 </div>
 
@@ -239,26 +239,26 @@ npm run docs:check-links # Validates documentation cross-links
 
 For practical guidance on configuring monitors and writing tests, see our comprehensive testing documentation:
 
-- [Testing Documentation](_media/Testing) - Includes fuzzing coverage, Playwright guides, and testing best practices
+- [Testing Documentation](./documents/docs/Testing/TESTING_HOME.md) - Includes fuzzing coverage, Playwright guides, and testing best practices
 
 ### Fuzzing and property-based tests
 
 For running and tuning our fast-check based fuzzing suites, see:
 
-- Fast-Check Fuzzing Coverage Guide → [docs/Testing/FAST_CHECK_FUZZING_GUIDE.md](_media/FAST_CHECK_FUZZING_GUIDE.md)
+- Fast-Check Fuzzing Coverage Guide → [docs/Testing/FAST_CHECK_FUZZING_GUIDE.md](./documents/docs/Testing/FAST_CHECK_FUZZING_GUIDE.md)
 
 ### End-to-end testing with Playwright
 
 For comprehensive testing with Playwright, including setup, configuration, and troubleshooting common issues:
 
-- Playwright Testing Guide → [docs/Testing/PLAYWRIGHT_TESTING_GUIDE.md](_media/PLAYWRIGHT_TESTING_GUIDE.md)
+- Playwright Testing Guide → [docs/Testing/PLAYWRIGHT_TESTING_GUIDE.md](./documents/docs/Testing/PLAYWRIGHT_TESTING_GUIDE.md)
 
 ### IPC automation workflow
 
 - `npm run generate:ipc` – Regenerates preload bridge typings and the channel inventory.
 - `npm run check:ipc` – Validates that generated artifacts are in sync; this command runs in CI.
 
-Need deeper guidance? See the [IPC Automation Workflow](documents/IPC-Automation-Workflow.md) guide for examples, troubleshooting, and CI integration tips.
+Need deeper guidance? See the [IPC Automation Workflow](./documents/docs/Guides/IPC_AUTOMATION_WORKFLOW.md) guide for examples, troubleshooting, and CI integration tips.
 
 ## Architectural principles
 
@@ -373,11 +373,11 @@ We welcome contributions from the community! Here's how you can help:
 
 ## 📄 License
 
-<div align="center"><a href="_media/LICENSE">
+<div align="center"><a href="https://github.com/Nick2bad4u/Uptime-Watcher/blob/main/LICENSE">
   <img src="https://img.shields.io/badge/license-Unlicense-green.svg" alt="License badge.">
 </a>
 
-<strong>This project is released under the <a href="_media/LICENSE">Unlicense</a> - Public Domain</strong>
+<strong>This project is released under the <a href="https://github.com/Nick2bad4u/Uptime-Watcher/blob/main/LICENSE">Unlicense</a> - Public Domain</strong>
 
 <em>You are free to use, modify, and distribute this software for any purpose, commercial or non-commercial, without any restrictions. Credit is appreciated but not required.</em></div>
 

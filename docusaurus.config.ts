@@ -4,7 +4,6 @@ import type * as Preset from "@docusaurus/preset-classic";
 import type { Config } from "@docusaurus/types";
 
 import { fileURLToPath } from "node:url";
-
 import { themes as prismThemes } from "prism-react-renderer";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
@@ -65,22 +64,22 @@ const pwaMaskIconColor = "#71B041";
 const config: Config = {
     // Set the /<baseUrl>/ pathname under which your site is served
     baseUrl,
+    baseUrlIssueBanner: true,
     clientModules: [modernEnhancementsClientModule],
-
     deploymentBranch: "gh-pages",
-
     favicon: "img/favicon.ico",
+
     // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
     future: futureConfig,
     i18n: {
         defaultLocale: "en",
         locales: ["en"],
     },
-
     markdown: {
         anchors: {
             maintainCase: true,
         },
+        emoji: true,
         format: "detect",
         hooks: {
             onBrokenMarkdownImages: "warn",
@@ -93,11 +92,12 @@ const config: Config = {
         },
         mermaid: true,
     },
+
+    noIndex: false,
     onBrokenAnchors: "warn",
     onBrokenLinks: "warn",
     onDuplicateRoutes: "warn",
     organizationName: "Nick2bad4u",
-
     // TypeDoc documentation is generated via standalone TypeDoc (npm run docs:typedoc)
     // This uses our custom typedoc.config.json configuration for better docs
     plugins: [
@@ -268,6 +268,7 @@ const config: Config = {
         //     },
         // ],
     ],
+
     presets: [
         [
             "classic",
@@ -288,24 +289,32 @@ const config: Config = {
                         "**/__tests__/**",
                     ],
                     feedOptions: {
+                        copyright: `© ${new Date().getFullYear()} Nick2bad4u`,
                         description: "Uptime Watcher updates and changelogs",
+                        language: "en",
                         limit: 20,
                         title: "Uptime Watcher Blog",
                         type: ["rss", "atom"], // Enable rss + atom
                     },
                     include: ["**/*.{md,mdx}"],
+                    onInlineAuthors: "warn",
+                    onInlineTags: "ignore",
+                    onUntruncatedBlogPosts: "warn",
                     path: "blog", // Relative to site dir
                     postsPerPage: 10,
                     routeBasePath: "blog", // URL: /Uptime-Watcher/blog/
+                    showLastUpdateAuthor: true,
+                    showLastUpdateTime: true,
                     showReadingTime: true,
+                    sortPosts: "descending",
                     truncateMarker:
                         /<!--\s*truncate\s*-->|\{\/\*\s*truncate\s*\*\/\}/u,
                 },
                 debug: true,
                 docs: {
                     breadcrumbs: true,
-                    editUrl:
-                        "https://github.com/Nick2bad4u/Uptime-Watcher/edit/main/docs/docusaurus/",
+                    editCurrentVersion: true,
+                    editUrl: "https://github.com/Nick2bad4u/Uptime-Watcher/",
                     exclude: [
                         "**/_*.{js,jsx,ts,tsx,md,mdx}",
                         "**/_*/**",
@@ -313,6 +322,9 @@ const config: Config = {
                         "**/__tests__/**",
                     ],
                     include: ["**/*.md", "**/*.mdx"],
+                    includeCurrentVersion: true,
+                    onInlineTags: "ignore",
+                    path: "docs",
                     routeBasePath: "docs",
                     showLastUpdateAuthor: true,
                     showLastUpdateTime: true,
@@ -322,7 +334,7 @@ const config: Config = {
                 },
                 pages: {
                     editUrl:
-                        "https://github.com/Nick2bad4u/Uptime-Watcher/edit/main/docs/docusaurus/src/pages/",
+                        "https://github.com/Nick2bad4u/Uptime-Watcher/issues/new?template=custom-issue.md#",
                     exclude: [
                         // Declarations (often generated next to CSS modules)
                         // must never become routable pages.
@@ -377,9 +389,9 @@ const config: Config = {
         ],
     ],
     projectName: "Uptime-Watcher",
-
     tagline:
         "Cross-platform desktop application for monitoring website uptime and server availability",
+
     themeConfig: {
         announcementBar: {
             backgroundColor: "#2E2A33",
@@ -402,7 +414,7 @@ const config: Config = {
             versionPersistence: "localStorage",
         },
         footer: {
-            copyright: `© ${new Date().getFullYear()} Nick2bad4u. 💻 Website Built and Powered by 🦖 Docusaurus.`,
+            copyright: `© ${new Date().getFullYear()} <a href="https://github.com/Nick2bad4u/" target="_blank" rel="noopener noreferrer">Nick2bad4u</a> 💻 Built with <a href="https://docusaurus.io/" target="_blank" rel="noopener noreferrer">🦖 Docusaurus</a>.`,
             links: [
                 {
                     items: [
@@ -429,7 +441,7 @@ const config: Config = {
                     items: [
                         {
                             label: "🏗️ Architecture",
-                            to: "/docs/documents/Architecture",
+                            to: "/docs/documents/docs/Architecture",
                         },
                         {
                             href: "https://nick2bad4u.github.io/Uptime-Watcher/eslint-inspector/",
@@ -437,7 +449,8 @@ const config: Config = {
                         },
                         {
                             href: "https://nick2bad4u.github.io/Uptime-Watcher/storybook/",
-                            label: "📚 Storybook",                        },
+                            label: "📚 Storybook",
+                        },
                         {
                             label: "📝 TSDoc Standards",
                             to: "/docs/category/-tsdoc-documentation",
@@ -467,6 +480,13 @@ const config: Config = {
                     title: "🚀 Get Involved",
                 },
             ],
+            logo: {
+                alt: "Uptime Watcher Logo",
+                height: 48,
+                href: baseUrl,
+                src: "img/logo.svg",
+                width: 48,
+            },
             style: "dark",
         },
         image: socialCardImage,
@@ -603,18 +623,31 @@ const config: Config = {
                 blogRouteBasePath: "blog",
                 docsDir: "docs",
                 docsRouteBasePath: "docs",
+                explicitSearchResultPath: false,
+                forceIgnoreNoIndex: true,
+                fuzzyMatchingDistance: 1,
                 hashed: true,
+                hideSearchBarWithNoSearchContext: false,
+                highlightSearchTermsOnTargetPage: true,
                 indexBlog: true,
                 indexDocs: true,
                 indexPages: false,
                 language: ["en"],
+                removeDefaultStemmer: true,
                 removeDefaultStopWordFilter: false,
+                searchBarPosition: "right",
+                searchBarShortcut: true,
+                searchBarShortcutHint: true,
+                searchBarShortcutKeymap: "ctrl+k",
+                searchResultContextMaxLength: 96,
+                searchResultLimits: 8,
                 useAllContextsWithNoSearchContext: false,
             },
         ],
     ],
-
     title: "Uptime Watcher",
+
+    titleDelimiter: "|",
 
     trailingSlash: false,
 

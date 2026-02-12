@@ -26,9 +26,15 @@
         "noEmit": false,
         "outDir": "../../.cache/builds/docusaurus/eslint",
         "paths": {
-            "@docusaurus/*": ["./.docusaurus/docusaurus/*"],
-            "@site/*": ["./*"],
-            "@theme/*": ["./.docusaurus/theme/*"]
+            "@docusaurus/*": [
+                "./.docusaurus/docusaurus/*"
+            ],
+            "@site/*": [
+                "./*"
+            ],
+            "@theme/*": [
+                "./.docusaurus/theme/*"
+            ]
         },
         "resolveJsonModule": true,
         "skipLibCheck": true,
@@ -47,19 +53,28 @@
         "**/*.spec.*"
     ],
     "extends": "./tsconfig.typedoc.json",
+    "files": [
+        "typedoc-plugins/prefixDocLinksCore.mjs",
+        "typedoc-plugins/hashToBangLinksCore.mjs"
+    ],
     "include": [
-        "**/*.ts",
-        "**/*.tsx",
+        "**/*.cjs",
+        "**/*.css",
         "**/*.js",
         "**/*.jsx",
-        "src/**/*",
-        "static/**/*",
-        "sidebars.ts",
-        "docusaurus.config.ts",
-        "**/*.css",
-        "**/*.scss",
         "**/*.md",
         "**/*.mdx",
-        "**/*.mjs"
+        "**/*.mjs",
+        "**/*.mts",
+        "**/*.scss",
+        "**/*.ts",
+        "**/*.tsx",
+        "typedoc-plugins/prefixDocLinksCore.mjs",
+        "typedoc-plugins/hashToBangLinksCore.mjs",
+        "docusaurus.config.ts",
+        "sidebars.ts",
+        "src/**/*",
+        "static/**/*",
+        "typedoc-plugins/**/*"
     ]
 }
