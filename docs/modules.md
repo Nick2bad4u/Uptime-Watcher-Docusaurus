@@ -1,4 +1,4 @@
-# Uptime Watcher - Complete Documentation v23.0.0
+# Uptime Watcher - Complete Documentation v23.1.0
 
 ## Documents
 
@@ -77,6 +77,7 @@
 - [docs/Guides/DOCUSAURUS_SETUP_GUIDE](./documents/docs/Guides/DOCUSAURUS_SETUP_GUIDE.md)
 - [docs/Guides/ENVIRONMENT_SETUP](./documents/docs/Guides/ENVIRONMENT_SETUP.md)
 - [docs/Guides/ERROR_HANDLING_GUIDE](./documents/docs/Guides/ERROR_HANDLING_GUIDE.md)
+- [docs/Guides/ESLINT_10_PLUGIN_BLOCKERS](./documents/docs/Guides/ESLINT_10_PLUGIN_BLOCKERS.md)
 - [docs/Guides/EVENT_SYSTEM_GUIDE](./documents/docs/Guides/EVENT_SYSTEM_GUIDE.md)
 - [docs/Guides/IPC_AUTOMATION_WORKFLOW](./documents/docs/Guides/IPC_AUTOMATION_WORKFLOW.md)
 - [docs/Guides/LINT_GUARDRAILS_AND_CUSTOM_RULES](./documents/docs/Guides/LINT_GUARDRAILS_AND_CUSTOM_RULES.md)
