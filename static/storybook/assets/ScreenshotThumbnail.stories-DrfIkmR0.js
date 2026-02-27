@@ -1,5 +1,0 @@
-import{S as t}from"./ScreenshotThumbnail-Dp50-FG9.js";import"./jsx-runtime-BHIWlbBZ.js";import"./iframe-K4-Qd2g0.js";import"./preload-helper-Cc2_yIPf.js";import"./useUiStore-CGZ9e-nd.js";import"./stringSafety-3narqytt.js";import"./utfByteLength-Dk-7ijHQ.js";import"./useTheme-wgAn8pNf.js";import"./storeErrorHandling-CxXe-kGL.js";import"./react-7wigyp5a.js";import"./EventsService-BeKrLUQ9.js";import"./index-DGHPf0hS.js";import"./index-BPOBReEt.js";const S={args:{siteName:"Storybook Observability",url:"https://status.storybook.dev"},component:t,parameters:{controls:{exclude:["url"]},layout:"centered"},tags:["autodocs"]},r={},o={args:{url:""}};r.parameters={...r.parameters,docs:{...r.parameters?.docs,source:{originalSource:"{}",...r.parameters?.docs?.source}}};o.parameters={...o.parameters,docs:{...o.parameters?.docs,source:{originalSource:`{
-  args: {
-    url: ""
-  }
-}`,...o.parameters?.docs?.source}}};const f=["Default","MissingUrl"];export{r as Default,o as MissingUrl,f as __namedExportsOrder,S as default};

@@ -2414,6 +2414,7 @@
         "zod/no-any-schema": "error",
         "zod/no-empty-custom-schema": "error",
         "zod/no-number-schema-with-int": "error",
+        "zod/no-string-schema-with-uuid": "error",
         "zod/no-optional-and-default-together": "error",
         "zod/no-throw-in-refine": "error",
         "zod/prefer-enum-over-literal-union": "error",
@@ -4047,6 +4048,7 @@
       "files": [
         "**/package.json"
       ],
+      "language": "json/json",
       "languageOptions": {
         "parser": "jsonc-eslint-parser",
         "parserOptions": {
@@ -7021,6 +7023,7 @@
         "@jcoreio/implicit-dependencies": {},
         "@metamask/design-tokens": {},
         "@microsoft/sdl": {},
+        "@rushstack/security": {},
         "@stylistic": {},
         "@typescript-eslint": {},
         "array-func": {},
@@ -8784,6 +8787,7 @@
         "zod/no-any-schema": "error",
         "zod/no-empty-custom-schema": "error",
         "zod/no-number-schema-with-int": "error",
+        "zod/no-string-schema-with-uuid": "error",
         "zod/no-optional-and-default-together": "error",
         "zod/no-throw-in-refine": "error",
         "zod/prefer-enum-over-literal-union": "error",
@@ -8863,6 +8867,7 @@
         "@microsoft/sdl/no-postmessage-star-origin": "warn",
         "@microsoft/sdl/no-unsafe-alloc": "warn",
         "@microsoft/sdl/no-winjs-html-unsafe": "warn",
+        "@rushstack/security/no-unsafe-regexp": "warn",
         "@stylistic/lines-around-comment": [
           "off",
           {
@@ -10732,6 +10737,7 @@
         "@jcoreio/implicit-dependencies": {},
         "@metamask/design-tokens": {},
         "@microsoft/sdl": {},
+        "@rushstack/security": {},
         "@stylistic": {},
         "@typescript-eslint": {},
         "antfu": {},
@@ -10808,7 +10814,6 @@
         "sort-class-members": {},
         "sort-destructure-keys": {},
         "sort-keys-fix": {},
-        "sort-react-dependency-arrays": {},
         "sql-template": {},
         "ssr-friendly": {},
         "storybook": {},
@@ -12589,6 +12594,7 @@
         "zod/no-any-schema": "error",
         "zod/no-empty-custom-schema": "error",
         "zod/no-number-schema-with-int": "error",
+        "zod/no-string-schema-with-uuid": "error",
         "zod/no-optional-and-default-together": "error",
         "zod/no-throw-in-refine": "error",
         "zod/prefer-enum-over-literal-union": "error",
@@ -12676,6 +12682,7 @@
         "@microsoft/sdl/no-postmessage-star-origin": "warn",
         "@microsoft/sdl/no-unsafe-alloc": "warn",
         "@microsoft/sdl/no-winjs-html-unsafe": "warn",
+        "@rushstack/security/no-unsafe-regexp": "warn",
         "@stylistic/jsx-child-element-spacing": "warn",
         "@stylistic/jsx-closing-bracket-location": "warn",
         "@stylistic/jsx-closing-tag-location": "warn",
@@ -13292,7 +13299,6 @@
         "safe-jsx/jsx-explicit-boolean": "error",
         "sort-destructure-keys/sort-destructure-keys": "off",
         "sort-keys-fix/sort-keys-fix": "off",
-        "sort-react-dependency-arrays/sort": "error",
         "sql-template/no-unsafe-query": "error",
         "ssr-friendly/no-dom-globals-in-constructor": "error",
         "ssr-friendly/no-dom-globals-in-module-scope": "error",
@@ -13578,6 +13584,7 @@
         "@jcoreio/implicit-dependencies": {},
         "@metamask/design-tokens": {},
         "@microsoft/sdl": {},
+        "@rushstack/security": {},
         "@stylistic": {},
         "@typescript-eslint": {},
         "antfu": {},
@@ -15470,6 +15477,7 @@
         "zod/no-any-schema": "error",
         "zod/no-empty-custom-schema": "error",
         "zod/no-number-schema-with-int": "error",
+        "zod/no-string-schema-with-uuid": "error",
         "zod/no-optional-and-default-together": "error",
         "zod/no-throw-in-refine": "error",
         "zod/prefer-enum-over-literal-union": "error",
@@ -15554,6 +15562,7 @@
         "@microsoft/sdl/no-postmessage-star-origin": "warn",
         "@microsoft/sdl/no-unsafe-alloc": "warn",
         "@microsoft/sdl/no-winjs-html-unsafe": "warn",
+        "@rushstack/security/no-unsafe-regexp": "warn",
         "@stylistic/lines-around-comment": [
           "off",
           {
@@ -17347,6 +17356,7 @@
         "@jcoreio/implicit-dependencies": {},
         "@metamask/design-tokens": {},
         "@microsoft/sdl": {},
+        "@rushstack/security": {},
         "@stylistic": {},
         "@typescript-eslint": {},
         "antfu": {},
@@ -17422,7 +17432,6 @@
         "sort-class-members": {},
         "sort-destructure-keys": {},
         "sort-keys-fix": {},
-        "sort-react-dependency-arrays": {},
         "sql-template": {},
         "ssr-friendly": {},
         "styled-components-a11y": {},
@@ -19235,6 +19244,7 @@
         "zod/no-any-schema": "error",
         "zod/no-empty-custom-schema": "error",
         "zod/no-number-schema-with-int": "error",
+        "zod/no-string-schema-with-uuid": "error",
         "zod/no-optional-and-default-together": "error",
         "zod/no-throw-in-refine": "error",
         "zod/prefer-enum-over-literal-union": "error",
@@ -19322,6 +19332,7 @@
         "@microsoft/sdl/no-postmessage-star-origin": "warn",
         "@microsoft/sdl/no-unsafe-alloc": "warn",
         "@microsoft/sdl/no-winjs-html-unsafe": "warn",
+        "@rushstack/security/no-unsafe-regexp": "warn",
         "@stylistic/jsx-child-element-spacing": "warn",
         "@stylistic/jsx-closing-bracket-location": "warn",
         "@stylistic/jsx-closing-tag-location": "warn",
@@ -19922,7 +19933,6 @@
         "safe-jsx/jsx-explicit-boolean": "error",
         "sort-destructure-keys/sort-destructure-keys": "off",
         "sort-keys-fix/sort-keys-fix": "off",
-        "sort-react-dependency-arrays/sort": "error",
         "sql-template/no-unsafe-query": "error",
         "ssr-friendly/no-dom-globals-in-constructor": "error",
         "ssr-friendly/no-dom-globals-in-module-scope": "error",
@@ -30787,7 +30797,6 @@
         "no-hardcoded-strings/no-hardcoded-strings": "off",
         "prefer-arrow/prefer-arrow-functions": "off",
         "react-useeffect/no-non-function-return": "off",
-        "sort-react-dependency-arrays/sort": "off",
         "storybook/meta-satisfies-type": "off",
         "styled-components-a11y/lang": "off",
         "tailwind/classnames-order": "off",
@@ -41407,7 +41416,6 @@
     },
     "jsdoc/require-jsdoc": {
       "docs": {
-        "category": "Stylistic Issues",
         "description": "Checks for presence of JSDoc comments, on functions and potentially other contexts (optionally limited to exports).",
         "recommended": true,
         "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-jsdoc.md#repos-sticky-header"
@@ -50147,6 +50155,16 @@
       "name": "zod/no-number-schema-with-int",
       "plugin": "zod"
     },
+    "zod/no-string-schema-with-uuid": {
+      "fixable": "code",
+      "type": "problem",
+      "docs": {
+        "description": "Disallow usage of `z.string().uuid()` in favor of the dedicated `z.uuid()` schema",
+        "url": "https://github.com/marcalexiei/eslint-plugin-zod/blob/HEAD/docs/rules/no-string-schema-with-uuid.md"
+      },
+      "name": "zod/no-string-schema-with-uuid",
+      "plugin": "zod"
+    },
     "zod/no-optional-and-default-together": {
       "type": "problem",
       "fixable": "code",
@@ -51015,7 +51033,7 @@
         "recommended": false,
         "url": "https://html-eslint.org/docs/rules/require-meta-charset"
       },
-      "fixable": null,
+      "fixable": "code",
       "name": "html/require-meta-charset",
       "plugin": "html"
     },
@@ -51359,12 +51377,14 @@
       "plugin": "html"
     },
     "html/no-ineffective-attrs": {
+      "type": "problem",
       "docs": {
         "description": "Disallow HTML attributes that have no effect in their context",
         "category": "Best Practice",
-        "recommended": false
+        "recommended": false,
+        "url": "https://html-eslint.org/docs/rules/no-ineffective-attrs"
       },
-      "type": "problem",
+      "fixable": null,
       "name": "html/no-ineffective-attrs",
       "plugin": "html"
     },
@@ -51448,6 +51468,18 @@
       },
       "fixable": null,
       "name": "html/no-invalid-attr-value",
+      "plugin": "html"
+    },
+    "html/head-order": {
+      "type": "code",
+      "docs": {
+        "description": "Enforce optimal ordering of elements in `<head>`",
+        "category": "Best Practice",
+        "recommended": false,
+        "url": "https://html-eslint.org/docs/rules/head-order"
+      },
+      "fixable": "code",
+      "name": "html/head-order",
       "plugin": "html"
     },
     "styled-components-a11y/accessible-emoji": {
@@ -52066,13 +52098,14 @@
     "package-json/require-attribution": {
       "defaultOptions": [
         {
-          "ignorePrivate": false,
+          "ignorePrivate": true,
           "preferContributorsOnly": false
         }
       ],
       "docs": {
-        "category": "Publishable",
+        "category": "Best Practices",
         "description": "Ensures that proper attribution is included, requiring that either `author` or `contributors` is defined, and that if `contributors` is present, it should include at least one contributor.",
+        "recommended": true,
         "url": "https://github.com/JoshuaKGoldberg/eslint-plugin-package-json/blob/HEAD/docs/rules/require-attribution.md"
       },
       "hasSuggestions": true,
@@ -52146,8 +52179,8 @@
     },
     "package-json/require-exports": {
       "docs": {
-        "category": "Publishable",
         "description": "Requires the `exports` property to be present.",
+        "recommended": true,
         "url": "https://github.com/JoshuaKGoldberg/eslint-plugin-package-json/blob/HEAD/docs/rules/require-exports.md"
       },
       "type": "suggestion",
@@ -52156,8 +52189,8 @@
     },
     "package-json/require-files": {
       "docs": {
-        "category": "Publishable",
         "description": "Requires the `files` property to be present.",
+        "recommended": true,
         "url": "https://github.com/JoshuaKGoldberg/eslint-plugin-package-json/blob/HEAD/docs/rules/require-files.md"
       },
       "type": "suggestion",
@@ -52222,8 +52255,8 @@
     },
     "package-json/require-repository": {
       "docs": {
-        "category": "Publishable",
         "description": "Requires the `repository` property to be present.",
+        "recommended": true,
         "url": "https://github.com/JoshuaKGoldberg/eslint-plugin-package-json/blob/HEAD/docs/rules/require-repository.md"
       },
       "type": "suggestion",
@@ -52241,8 +52274,8 @@
     },
     "package-json/require-sideEffects": {
       "docs": {
-        "category": "Publishable",
         "description": "Requires the `sideEffects` property to be present.",
+        "recommended": true,
         "url": "https://github.com/JoshuaKGoldberg/eslint-plugin-package-json/blob/HEAD/docs/rules/require-sideEffects.md"
       },
       "type": "suggestion",
@@ -53569,7 +53602,11 @@
       ],
       "docs": {
         "description": "disallow irregular whitespace",
-        "recommended": null,
+        "recommended": [
+          "json",
+          "jsonc",
+          "json5"
+        ],
         "extensionRule": true,
         "layout": false,
         "url": "https://ota-meshi.github.io/eslint-plugin-jsonc/rules/no-irregular-whitespace.html",
@@ -54128,6 +54165,22 @@
       "name": "toml/indent",
       "plugin": "toml"
     },
+    "toml/inline-table-curly-newline": {
+      "docs": {
+        "description": "enforce linebreaks after opening and before closing braces",
+        "categories": [
+          "standard"
+        ],
+        "extensionRule": "object-curly-newline",
+        "url": "https://ota-meshi.github.io/eslint-plugin-toml/rules/inline-table-curly-newline.html",
+        "ruleId": "toml/inline-table-curly-newline",
+        "ruleName": "inline-table-curly-newline"
+      },
+      "type": "layout",
+      "fixable": "whitespace",
+      "name": "toml/inline-table-curly-newline",
+      "plugin": "toml"
+    },
     "toml/inline-table-curly-spacing": {
       "docs": {
         "description": "enforce consistent spacing inside braces",
@@ -54142,6 +54195,23 @@
       "type": "layout",
       "fixable": "whitespace",
       "name": "toml/inline-table-curly-spacing",
+      "plugin": "toml"
+    },
+    "toml/inline-table-key-value-newline": {
+      "docs": {
+        "description": "enforce placing inline table key-value pairs on separate lines",
+        "categories": [
+          "standard"
+        ],
+        "extensionRule": "object-property-newline",
+        "url": "https://ota-meshi.github.io/eslint-plugin-toml/rules/inline-table-key-value-newline.html",
+        "ruleId": "toml/inline-table-key-value-newline",
+        "ruleName": "inline-table-key-value-newline"
+      },
+      "fixable": "whitespace",
+      "hasSuggestions": false,
+      "type": "layout",
+      "name": "toml/inline-table-key-value-newline",
       "plugin": "toml"
     },
     "toml/key-spacing": {
@@ -54793,6 +54863,16 @@
       },
       "name": "@metamask/design-tokens/prefer-theme-color-classnames",
       "plugin": "@metamask/design-tokens"
+    },
+    "@rushstack/security/no-unsafe-regexp": {
+      "type": "problem",
+      "docs": {
+        "description": "Requires regular expressions to be constructed from string constants rather than dynamically building strings at runtime.",
+        "recommended": "strict",
+        "url": "https://www.npmjs.com/package/@rushstack/eslint-plugin-security"
+      },
+      "name": "@rushstack/security/no-unsafe-regexp",
+      "plugin": "@rushstack/security"
     },
     "@stylistic/array-bracket-newline": {
       "type": "layout",
@@ -56439,7 +56519,7 @@
         "recommended": "recommended",
         "recommendedSeverity": "error",
         "requiresTypeChecking": true,
-        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.2/docs/rules/functional-parameters.md"
+        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.4/docs/rules/functional-parameters.md"
       },
       "name": "functional/functional-parameters",
       "plugin": "functional"
@@ -56452,7 +56532,7 @@
         "recommended": "recommended",
         "recommendedSeverity": "error",
         "requiresTypeChecking": true,
-        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.2/docs/rules/immutable-data.md"
+        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.4/docs/rules/immutable-data.md"
       },
       "name": "functional/immutable-data",
       "plugin": "functional"
@@ -56465,7 +56545,7 @@
         "recommended": "recommended",
         "recommendedSeverity": "error",
         "requiresTypeChecking": false,
-        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.2/docs/rules/no-classes.md"
+        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.4/docs/rules/no-classes.md"
       },
       "name": "functional/no-classes",
       "plugin": "functional"
@@ -56478,7 +56558,7 @@
         "recommended": "recommended",
         "recommendedSeverity": "error",
         "requiresTypeChecking": false,
-        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.2/docs/rules/no-class-inheritance.md"
+        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.4/docs/rules/no-class-inheritance.md"
       },
       "name": "functional/no-class-inheritance",
       "plugin": "functional"
@@ -56491,7 +56571,7 @@
         "recommended": "recommended",
         "recommendedSeverity": "error",
         "requiresTypeChecking": true,
-        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.2/docs/rules/no-conditional-statements.md"
+        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.4/docs/rules/no-conditional-statements.md"
       },
       "name": "functional/no-conditional-statements",
       "plugin": "functional"
@@ -56504,7 +56584,7 @@
         "recommended": "recommended",
         "recommendedSeverity": "error",
         "requiresTypeChecking": true,
-        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.2/docs/rules/no-expression-statements.md"
+        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.4/docs/rules/no-expression-statements.md"
       },
       "name": "functional/no-expression-statements",
       "plugin": "functional"
@@ -56517,7 +56597,7 @@
         "recommended": "recommended",
         "recommendedSeverity": "error",
         "requiresTypeChecking": false,
-        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.2/docs/rules/no-let.md"
+        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.4/docs/rules/no-let.md"
       },
       "name": "functional/no-let",
       "plugin": "functional"
@@ -56530,7 +56610,7 @@
         "recommended": "recommended",
         "recommendedSeverity": "error",
         "requiresTypeChecking": false,
-        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.2/docs/rules/no-loop-statements.md"
+        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.4/docs/rules/no-loop-statements.md"
       },
       "name": "functional/no-loop-statements",
       "plugin": "functional"
@@ -56543,7 +56623,7 @@
         "recommended": "recommended",
         "recommendedSeverity": "error",
         "requiresTypeChecking": true,
-        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.2/docs/rules/no-mixed-types.md"
+        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.4/docs/rules/no-mixed-types.md"
       },
       "name": "functional/no-mixed-types",
       "plugin": "functional"
@@ -56556,7 +56636,7 @@
         "recommended": false,
         "recommendedSeverity": "error",
         "requiresTypeChecking": false,
-        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.2/docs/rules/no-promise-reject.md"
+        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.4/docs/rules/no-promise-reject.md"
       },
       "name": "functional/no-promise-reject",
       "plugin": "functional"
@@ -56569,7 +56649,7 @@
         "recommended": "recommended",
         "recommendedSeverity": "error",
         "requiresTypeChecking": true,
-        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.2/docs/rules/no-return-void.md"
+        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.4/docs/rules/no-return-void.md"
       },
       "name": "functional/no-return-void",
       "plugin": "functional"
@@ -56582,7 +56662,7 @@
         "recommended": "recommended",
         "recommendedSeverity": "error",
         "requiresTypeChecking": false,
-        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.2/docs/rules/no-this-expressions.md"
+        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.4/docs/rules/no-this-expressions.md"
       },
       "name": "functional/no-this-expressions",
       "plugin": "functional"
@@ -56595,7 +56675,7 @@
         "recommended": "recommended",
         "recommendedSeverity": "error",
         "requiresTypeChecking": true,
-        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.2/docs/rules/no-throw-statements.md"
+        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.4/docs/rules/no-throw-statements.md"
       },
       "name": "functional/no-throw-statements",
       "plugin": "functional"
@@ -56608,7 +56688,7 @@
         "recommended": "recommended",
         "recommendedSeverity": "error",
         "requiresTypeChecking": false,
-        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.2/docs/rules/no-try-statements.md"
+        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.4/docs/rules/no-try-statements.md"
       },
       "name": "functional/no-try-statements",
       "plugin": "functional"
@@ -56621,7 +56701,7 @@
         "recommended": "recommended",
         "recommendedSeverity": "error",
         "requiresTypeChecking": true,
-        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.2/docs/rules/prefer-immutable-types.md"
+        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.4/docs/rules/prefer-immutable-types.md"
       },
       "fixable": "code",
       "hasSuggestions": true,
@@ -56636,7 +56716,7 @@
         "recommended": "recommended",
         "recommendedSeverity": "error",
         "requiresTypeChecking": true,
-        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.2/docs/rules/prefer-property-signatures.md"
+        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.4/docs/rules/prefer-property-signatures.md"
       },
       "name": "functional/prefer-property-signatures",
       "plugin": "functional"
@@ -56654,7 +56734,7 @@
         "recommended": "recommended",
         "recommendedSeverity": "error",
         "requiresTypeChecking": true,
-        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.2/docs/rules/prefer-readonly-type.md"
+        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.4/docs/rules/prefer-readonly-type.md"
       },
       "fixable": "code",
       "name": "functional/prefer-readonly-type",
@@ -56668,7 +56748,7 @@
         "recommended": "recommended",
         "recommendedSeverity": "warn",
         "requiresTypeChecking": true,
-        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.2/docs/rules/prefer-tacit.md"
+        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.4/docs/rules/prefer-tacit.md"
       },
       "hasSuggestions": true,
       "name": "functional/prefer-tacit",
@@ -56682,7 +56762,7 @@
         "recommended": "recommended",
         "recommendedSeverity": "error",
         "requiresTypeChecking": true,
-        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.2/docs/rules/readonly-type.md"
+        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.4/docs/rules/readonly-type.md"
       },
       "fixable": "code",
       "name": "functional/readonly-type",
@@ -56696,7 +56776,7 @@
         "recommended": "recommended",
         "recommendedSeverity": "error",
         "requiresTypeChecking": true,
-        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.2/docs/rules/type-declaration-immutability.md"
+        "url": "https://github.com/eslint-functional/eslint-plugin-functional/blob/v9.0.4/docs/rules/type-declaration-immutability.md"
       },
       "fixable": "code",
       "hasSuggestions": true,
@@ -60094,18 +60174,6 @@
       "hasSuggestions": true,
       "name": "react-useeffect/no-non-function-return",
       "plugin": "react-useeffect"
-    },
-    "sort-react-dependency-arrays/sort": {
-      "docs": {
-        "category": "Stylistic Issues",
-        "description": "Sort React dependency arrays",
-        "recommended": false,
-        "url": "https://github.com/stevensacks/eslint-plugin-sort-react-dependency-arrays"
-      },
-      "fixable": "code",
-      "type": "suggestion",
-      "name": "sort-react-dependency-arrays/sort",
-      "plugin": "sort-react-dependency-arrays"
     },
     "testing-library/await-async-events": {
       "type": "problem",
@@ -123052,7 +123120,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1771451352679,
+    "lastUpdate": 1772149955903,
     "basePath": "",
     "configPath": ""
   }

@@ -1,0 +1,22 @@
+var v=Object.defineProperty;var r=(t,o)=>v(t,"name",{value:o,configurable:!0});import{S as b}from"./SiteDetailsNavigation-D0t7_Fij.js";import{a as y,b as m}from"./siteStoryHelpers-kMShK3-v.js";import"./jsx-runtime-BHIWlbBZ.js";import"./iframe-DyvIPkVZ.js";import"./preload-helper-Cc2_yIPf.js";import"./ThemedButton-DbGfPeS5.js";import"./types-B6zT3oaC.js";import"./ThemedText-DrvOTmqm.js";import"./fallbacks-C9nVEKxx.js";import"./icons-DV64AXrl.js";import"./SiteMonitoringButton-CR_Xfps8.js";import"./Tooltip-BO0ObihS.js";import"./index-B-xPFuZC.js";import"./index-A94RU7PH.js";import"./MonitorSelector-_nJMeYFj.js";import"./ThemedSelect-BcPOVSaP.js";import"./useTheme-DJ7epzI1.js";import"./storeErrorHandling-BURLOlzH.js";import"./react-CGdiL3be.js";import"./EventsService-CzUXSiPB.js";import"./useThemedControlStyles-mPfLD04Y.js";import"./monitorDisplayInfo-CinlOv80.js";import"./validation-CJJLDQTF.js";import"./SurfaceContainer-B5C59JQU.js";import"./ThemedBox-BKQMevqh.js";import"./useSitesStore-_T8EKnLS.js";import"./utfByteLength-Dk-7ijHQ.js";import"./stringSafety-3narqytt.js";import"./useUiStore-bsatqH6C.js";const{action:g}=__STORYBOOK_MODULE_ACTIONS__,u=r(()=>{const t=m({id:"storybook-nav-http",monitoring:!0,responseTime:150,status:"up",type:"http",url:"https://status.storybook.dev"}),o=m({host:"db.storybook.dev",id:"storybook-nav-port",monitoring:!0,port:5432,status:"degraded",type:"port"}),e=m({id:"storybook-nav-heartbeat",monitoring:!1,status:"paused",type:"server-heartbeat",url:"https://status.storybook.dev/heartbeat"}),p=y({identifier:"storybook-site-navigation",monitors:[t,o,e],monitoring:!0,name:"Navigation Coverage Site"});return{heartbeatMonitor:e,portMonitor:o,primaryMonitorId:t.id,site:p}},"createNavigationSite"),f=r(()=>{const t=u(),o=t.site.monitors.map(p=>({...p,monitoring:!1,status:"paused"})),e={...t.site,monitoring:!1,monitors:o};return{primaryMonitorId:o[0]?.id??"",site:e}},"createPausedNavigationSite"),i=r(t=>async()=>{g(t)()},"createAsyncAction"),l=u(),Z={args:{activeSiteDetailsTab:"site-overview",currentSite:l.site,handleMonitorIdChange:r(t=>g("monitor-id-change")(t.target.value),"handleMonitorIdChange"),handleStartMonitoring:i("start-monitoring"),handleStartSiteMonitoring:i("start-site-monitoring"),handleStopMonitoring:i("stop-monitoring"),handleStopSiteMonitoring:i("stop-site-monitoring"),isLoading:!1,isMonitoring:!0,selectedMonitorId:l.primaryMonitorId,setActiveSiteDetailsTab:r(t=>g("set-active-site-details-tab")(t),"setActiveSiteDetailsTab")},component:b,parameters:{controls:{exclude:["currentSite","handleMonitorIdChange","handleStartMonitoring","handleStartSiteMonitoring","handleStopMonitoring","handleStopSiteMonitoring","selectedMonitorId","setActiveSiteDetailsTab"]},layout:"fullscreen"},tags:["autodocs"]},n={},M=f(),a={args:{currentSite:M.site,isMonitoring:!1,selectedMonitorId:M.primaryMonitorId}},S=u(),s={args:{currentSite:S.site,selectedMonitorId:S.portMonitor.id}},c={args:{isLoading:!0}},h={primaryMonitorId:"",site:y({identifier:"storybook-site-navigation-empty",monitors:[],monitoring:!1,name:"Navigation No Monitors"})},d={args:{currentSite:h.site,isMonitoring:!1,selectedMonitorId:h.primaryMonitorId}};n.parameters={...n.parameters,docs:{...n.parameters?.docs,source:{originalSource:"{}",...n.parameters?.docs?.source}}};a.parameters={...a.parameters,docs:{...a.parameters?.docs,source:{originalSource:`{
+  args: {
+    currentSite: pausedScenario.site,
+    isMonitoring: false,
+    selectedMonitorId: pausedScenario.primaryMonitorId
+  }
+}`,...a.parameters?.docs?.source}}};s.parameters={...s.parameters,docs:{...s.parameters?.docs,source:{originalSource:`{
+  args: {
+    currentSite: alternateScenario.site,
+    selectedMonitorId: alternateScenario.portMonitor.id
+  }
+}`,...s.parameters?.docs?.source}}};c.parameters={...c.parameters,docs:{...c.parameters?.docs,source:{originalSource:`{
+  args: {
+    isLoading: true
+  }
+}`,...c.parameters?.docs?.source}}};d.parameters={...d.parameters,docs:{...d.parameters?.docs,source:{originalSource:`{
+  args: {
+    currentSite: noMonitorScenario.site,
+    isMonitoring: false,
+    selectedMonitorId: noMonitorScenario.primaryMonitorId
+  }
+}`,...d.parameters?.docs?.source}}};const $=["Default","MonitoringPaused","PortMonitorSelected","LoadingState","NoMonitorsConfigured"];export{n as Default,c as LoadingState,a as MonitoringPaused,d as NoMonitorsConfigured,s as PortMonitorSelected,$ as __namedExportsOrder,Z as default};
