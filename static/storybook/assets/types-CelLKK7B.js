@@ -1,0 +1,1 @@
+import{n as e}from"./chunk-BneVvdWh.js";var t,n=e((()=>{t={THEMED_BADGE:`themed-badge`,THEMED_BOX:`themed-box`,THEMED_BUTTON:`themed-button`,THEMED_TEXT:`themed-text`}}));export{n,t};

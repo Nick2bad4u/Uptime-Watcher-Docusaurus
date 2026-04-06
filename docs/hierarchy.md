@@ -1,4 +1,4 @@
-# Uptime Watcher - Complete Documentation v23.2.0
+# Uptime Watcher - Complete Documentation v23.7.0
 
 ## Hierarchy Summary
 
@@ -69,7 +69,7 @@
 - [BaseLogger](./shared/utils/logger/interfaces/interfaces/BaseLogger.md)
     - [ExtendedLogger](./shared/utils/logger/interfaces/interfaces/ExtendedLogger.md)
         - [UnifiedLogger](./shared/utils/logger/interfaces/interfaces/UnifiedLogger.md)
-            - [LoggerInterface](./src/components/AddSiteForm/Submit/interfaces/LoggerInterface.md)
+            - [LoggerInterface](./src/services/logger/interfaces/LoggerInterface.md)
 
 ---
 
@@ -151,7 +151,11 @@
 ### CoreComponentProperties
 
 - [CoreComponentProperties](./shared/types/componentProps/interfaces/CoreComponentProperties.md)
+    - [ErrorAlertProperties](./src/components/common/ErrorAlert/ErrorAlert/interfaces/ErrorAlertProperties.md)
+
     - [HistoryChartProperties](./src/components/common/HistoryChart/interfaces/HistoryChartProperties.md)
+
+    - [SiteMonitoringButtonProperties](./src/components/common/SiteMonitoringButton/SiteMonitoringButton/interfaces/SiteMonitoringButtonProperties.md)
 
     - [StatusBadgeProperties](./src/components/common/StatusBadge/interfaces/StatusBadgeProperties.md)
 
@@ -172,10 +176,6 @@
     - [ThemedProgressProperties](./src/theme/components/ThemedProgress/interfaces/ThemedProgressProperties.md)
 
     - [ThemedTooltipProperties](./src/theme/components/ThemedTooltip/interfaces/ThemedTooltipProperties.md)
-
-    - [ErrorAlertProperties](./src/components/common/ErrorAlert/ErrorAlert/interfaces/ErrorAlertProperties.md)
-
-    - [SiteMonitoringButtonProperties](./src/components/common/SiteMonitoringButton/SiteMonitoringButton/interfaces/SiteMonitoringButtonProperties.md)
 
 ---
 

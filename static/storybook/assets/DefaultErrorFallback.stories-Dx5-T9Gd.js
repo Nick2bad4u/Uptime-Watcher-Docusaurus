@@ -1,0 +1,15 @@
+import{a as e,n as t}from"./chunk-BneVvdWh.js";import{M as n,Qt as r,j as i}from"./iframe-CAh388JZ.js";import{t as a}from"./jsx-runtime-Bn1Ys6_W.js";var o,s,c,l=t((()=>{o=e(r()),s=a(),c=({error:e,onRetry:t})=>{let n=(0,o.useCallback)(()=>{window.location.reload()},[]),r=e?.message&&typeof e.message==`string`&&e.message.trim()?e.message:`An unexpected error occurred while loading this section.`;return(0,s.jsxs)(`div`,{className:`border-error-default bg-error-muted flex flex-col items-center justify-center rounded-lg border p-8`,children:[(0,s.jsxs)(`div`,{className:`text-error-default mb-4`,children:[(0,s.jsx)(`h2`,{className:`mb-2 text-lg font-semibold`,children:`Something went wrong`}),(0,s.jsx)(`p`,{className:`text-sm`,children:r})]}),(0,s.jsxs)(`div`,{className:`flex gap-4`,children:[(0,s.jsx)(`button`,{className:`hover:bg-error-alternative bg-error-default text-primary-inverse rounded-xs px-4 py-2 text-sm font-medium`,onClick:t,type:`button`,children:`Try Again`}),(0,s.jsx)(`button`,{className:`hover:bg-error-muted border-error-default bg-error-muted/50 text-error-default rounded-xs border px-4 py-2 text-sm font-medium`,onClick:n,type:`button`,children:`Reload Page`})]})]})},c.__docgenInfo={description:`Default fallback component for error boundary`,methods:[],displayName:`DefaultErrorFallback`}})),u,d,f,p,m,h,g,_;t((()=>{l(),i(),u=e(r()),d=a(),{action:f}=__STORYBOOK_MODULE_ACTIONS__,p={args:{error:Error(`Failed to connect to the monitoring service.`),onRetry:f(`retry`)},component:c,parameters:{layout:`centered`},tags:[`autodocs`]},m=({children:e})=>{let t=(0,u.useRef)(null),r=f(`window.reload`),i=()=>{r()};return n(()=>{let e=globalThis.vi;if(e?.spyOn)try{let n=e.spyOn(window.location,`reload`);n.mockImplementation(i),t.current=()=>{n.mockRestore()};return}catch{t.current=null}try{let e=window.location,n=new Proxy(e,{get(e,t,n){if(t===`reload`)return i;let r=Reflect.get(e,t,n);return typeof r==`function`?r.bind(e):r}});Object.defineProperty(window,`location`,{configurable:!0,value:n}),t.current=()=>{Object.defineProperty(window,`location`,{configurable:!0,value:e})}}catch{t.current=null}},()=>{t.current?.(),t.current=null}),(0,d.jsx)(d.Fragment,{children:e})},h={render:e=>(0,d.jsx)(m,{children:(0,d.jsx)(c,{...e})})},g={render:e=>{let t={...e};return Reflect.deleteProperty(t,`error`),(0,d.jsx)(m,{children:(0,d.jsx)(c,{...t})})}},h.parameters={...h.parameters,docs:{...h.parameters?.docs,source:{originalSource:`{
+  render: (args): JSX.Element => <StubReload>
+            <DefaultErrorFallback {...args} />
+        </StubReload>
+}`,...h.parameters?.docs?.source}}},g.parameters={...g.parameters,docs:{...g.parameters?.docs,source:{originalSource:`{
+  render: (args): JSX.Element => {
+    const fallbackArgs = {
+      ...args
+    };
+    Reflect.deleteProperty(fallbackArgs, "error");
+    return <StubReload>
+                <DefaultErrorFallback {...fallbackArgs as typeof args} />
+            </StubReload>;
+  }
+}`,...g.parameters?.docs?.source}}},_=[`WithError`,`WithoutError`]}))();export{h as WithError,g as WithoutError,_ as __namedExportsOrder,p as default};

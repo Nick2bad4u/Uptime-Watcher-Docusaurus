@@ -1,1 +1,0 @@
-var s=Object.defineProperty;var o=(t,e)=>s(t,"name",{value:e,configurable:!0});function n(t){let e;for(const r of t){const{timestamp:i}=r;typeof i=="number"&&Number.isFinite(i)&&(e===void 0||i>e)&&(e=i)}return e}o(n,"getLatestHistoryTimestamp");function m(t){if(t)return n(t.history)}o(m,"getLatestMonitorHistoryTimestamp");export{m as a,n as g};

@@ -1,4 +1,4 @@
-# Uptime Watcher - Complete Documentation v23.2.0
+# Uptime Watcher - Complete Documentation v23.7.0
 
 ## Documents
 
