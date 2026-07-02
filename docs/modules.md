@@ -737,8 +737,6 @@
 - [src/components/Updates/UpdateNotificationBanner](./src/components/Updates/UpdateNotificationBanner/index.md)
 - [src/components/common/ConfirmDialog/ConfirmDialog](./src/components/common/ConfirmDialog/ConfirmDialog/index.md)
 - [src/components/common/ErrorAlert/ErrorAlert](./src/components/common/ErrorAlert/ErrorAlert/index.md)
-- [src/components/common/GalaxyBackground/GalaxyBackground](./src/components/common/GalaxyBackground/GalaxyBackground/index.md)
-- [src/components/common/GalaxyBackground/galaxyBackgroundUtils](./src/components/common/GalaxyBackground/galaxyBackgroundUtils/index.md)
 - [src/components/common/HistoryChart](./src/components/common/HistoryChart/index.md)
 - [src/components/common/MarqueeText/MarqueeText](./src/components/common/MarqueeText/MarqueeText/index.md)
 - [src/components/common/Modal/Modal](./src/components/common/Modal/Modal/index.md)
