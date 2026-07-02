@@ -1,0 +1,1 @@
+import{i as e}from"./preload-helper-xPQekRTU.js";import{nt as t,rt as n}from"./iframe-CpaI1qLl.js";import{n as r}from"./urlSafety-DZiBLG3d.js";var i,a=e((()=>{r(),t(),i=e=>{let t=e.replaceAll(/[\s%]/gu,``),r=Number.parseFloat(t);return Number.isNaN(r)?(n.warn(`Invalid uptime value received`,{uptime:e}),0):Math.min(100,Math.max(0,r))}}));export{i as n,a as t};

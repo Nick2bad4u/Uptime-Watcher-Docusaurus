@@ -1,1 +1,0 @@
-import{n as e}from"./chunk-BneVvdWh.js";function t(e){let t;for(let n of e){let{timestamp:e}=n;typeof e==`number`&&Number.isFinite(e)&&(t===void 0||e>t)&&(t=e)}return t}function n(e){if(e)return t(e.history)}var r=e((()=>{}));export{n,r,t};

@@ -1,1 +1,0 @@
-import{n as e}from"./chunk-BneVvdWh.js";var t,n=e((()=>{t=(e=300)=>new Promise(t=>{let n=window.setTimeout(()=>{window.clearTimeout(n),t()},e)})}));export{t as n,n as t};

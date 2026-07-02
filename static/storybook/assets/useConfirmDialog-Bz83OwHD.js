@@ -1,1 +1,0 @@
-import{a as e,n as t}from"./chunk-BneVvdWh.js";import{Qt as n}from"./iframe-CAh388JZ.js";import{i as r,r as i}from"./modalHandlers-ClBlpptK.js";function a(){return(0,o.useCallback)(e=>r(e),[])}var o,s=t((()=>{o=e(n()),i()}));export{a as n,s as t};

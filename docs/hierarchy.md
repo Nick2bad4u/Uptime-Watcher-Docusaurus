@@ -1,4 +1,4 @@
-# Uptime Watcher - Complete Documentation v23.7.0
+# Uptime Watcher - Complete Documentation v23.8.0
 
 ## Hierarchy Summary
 
@@ -51,15 +51,15 @@
 ### BaseFormData
 
 - [BaseFormData](./src/types/monitorFormData/interfaces/BaseFormData.md)
+    - [CdnEdgeConsistencyFormData](./src/types/monitorFormData/interfaces/CdnEdgeConsistencyFormData.md)
+    - [DnsFormData](./src/types/monitorFormData/interfaces/DnsFormData.md)
     - [HttpFormData](./src/types/monitorFormData/interfaces/HttpFormData.md)
     - [HttpKeywordFormData](./src/types/monitorFormData/interfaces/HttpKeywordFormData.md)
-    - [HttpStatusFormData](./src/types/monitorFormData/interfaces/HttpStatusFormData.md)
     - [HttpLatencyFormData](./src/types/monitorFormData/interfaces/HttpLatencyFormData.md)
+    - [HttpStatusFormData](./src/types/monitorFormData/interfaces/HttpStatusFormData.md)
     - [PingFormData](./src/types/monitorFormData/interfaces/PingFormData.md)
     - [PortFormData](./src/types/monitorFormData/interfaces/PortFormData.md)
-    - [DnsFormData](./src/types/monitorFormData/interfaces/DnsFormData.md)
     - [SslFormData](./src/types/monitorFormData/interfaces/SslFormData.md)
-    - [CdnEdgeConsistencyFormData](./src/types/monitorFormData/interfaces/CdnEdgeConsistencyFormData.md)
     - [WebsocketKeepaliveFormData](./src/types/monitorFormData/interfaces/WebsocketKeepaliveFormData.md)
 
 ---
@@ -137,6 +137,7 @@
 ### CloudStorageProvider
 
 - [CloudStorageProvider](./electron/services/cloud/providers/CloudStorageProvider.types/interfaces/CloudStorageProvider.md)
+
     - [EncryptedSyncCloudStorageProvider](./electron/services/cloud/providers/EncryptedSyncCloudStorageProvider/classes/EncryptedSyncCloudStorageProvider.md)
 
 ---

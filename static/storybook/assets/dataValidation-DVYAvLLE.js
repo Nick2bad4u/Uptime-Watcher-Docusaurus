@@ -1,1 +1,0 @@
-import{n as e}from"./chunk-BneVvdWh.js";import{N as t,P as n}from"./iframe-CAh388JZ.js";import{n as r}from"./urlSafety-B8q1mQEG.js";var i,a=e((()=>{r(),t(),i=e=>{let t=e.replaceAll(/[\s%]/gu,``),r=Number.parseFloat(t);return Number.isNaN(r)?(n.warn(`Invalid uptime value received`,{uptime:e}),0):Math.min(100,Math.max(0,r))}}));export{i as n,a as t};

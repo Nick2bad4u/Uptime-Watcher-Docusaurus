@@ -215,6 +215,6 @@ const sidebars: SidebarsConfig = {
             type: "category",
         },
     ],
-};
+} satisfies SidebarsConfig;
 
 export default sidebars;
