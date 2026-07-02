@@ -1,0 +1,9 @@
+import{i as e}from"./preload-helper-CT_b8DTk.js";import{t}from"./jsx-runtime-DqZldVDK.js";import{i as n,t as r}from"./siteStoryHelpers-Lbx2Y-oy.js";import{n as i,t as a}from"./MonitoringStatusDisplay-DxqtDJ2R.js";var o,s,c,l,u,d,f,p;e((()=>{i(),n(),o=t(),s={args:{monitors:[]},component:a,parameters:{controls:{exclude:[`monitors`]},layout:`centered`},tags:[`autodocs`]},c=()=>[r({id:`storybook-http-monitor`,monitoring:!0,responseTime:140,status:`up`,type:`http`,url:`https://status.storybook.dev`}),r({host:`db.storybook.dev`,id:`storybook-port-monitor`,monitoring:!0,port:5432,status:`degraded`,type:`port`}),r({id:`storybook-ping-monitor`,monitoring:!1,status:`paused`,type:`ping`})],l=()=>[r({id:`storybook-paused-http`,monitoring:!1,status:`paused`,type:`http`,url:`https://status.storybook.dev`}),r({host:`api.storybook.dev`,id:`storybook-paused-port`,monitoring:!1,port:8443,status:`paused`,type:`port`})],u={render:e=>(0,o.jsx)(a,{...e,monitors:c()})},d={render:e=>(0,o.jsx)(a,{...e,monitors:l()})},f={args:{monitors:[]}},u.parameters={...u.parameters,docs:{...u.parameters?.docs,source:{originalSource:`{
+  render: args => <MonitoringStatusDisplay {...args} monitors={createMixedMonitors()} />
+}`,...u.parameters?.docs?.source}}},d.parameters={...d.parameters,docs:{...d.parameters?.docs,source:{originalSource:`{
+  render: args => <MonitoringStatusDisplay {...args} monitors={createPausedMonitors()} />
+}`,...d.parameters?.docs?.source}}},f.parameters={...f.parameters,docs:{...f.parameters?.docs,source:{originalSource:`{
+  args: {
+    monitors: []
+  }
+}`,...f.parameters?.docs?.source}}},p=[`MixedStatuses`,`AllPaused`,`NoMonitorsConfigured`]}))();export{d as AllPaused,u as MixedStatuses,f as NoMonitorsConfigured,p as __namedExportsOrder,s as default};
