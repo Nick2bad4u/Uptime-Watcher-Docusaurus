@@ -1,1 +1,0 @@
-import{i as e}from"./preload-helper-CT_b8DTk.js";import{k as t,t as n,x as r}from"./distribution-BzBsdpyi.js";function i(e){let n;for(let i of e){let{timestamp:e}=i,a=t(n);typeof e==`number`&&r(e)&&(!a||e>(n??e))&&(n=e)}return n}function a(e){if(e)return i(e.history)}var o=e((()=>{n()}));export{a as n,o as r,i as t};

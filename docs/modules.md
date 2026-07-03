@@ -331,6 +331,7 @@
 - [electron/services/database/transactionAdapters](./electron/services/database/transactionAdapters/index.md)
 - [electron/services/database/utils/backup/databaseBackup](./electron/services/database/utils/backup/databaseBackup/index.md)
 - [electron/services/database/utils/converters/valueConverters](./electron/services/database/utils/converters/valueConverters/index.md)
+- [electron/services/database/utils/historyLimitSettingParser](./electron/services/database/utils/historyLimitSettingParser/index.md)
 - [electron/services/database/utils/maintenance/databaseLockRecovery](./electron/services/database/utils/maintenance/databaseLockRecovery/index.md)
 - [electron/services/database/utils/maintenance/historyManipulation](./electron/services/database/utils/maintenance/historyManipulation/index.md)
 - [electron/services/database/utils/maintenance/historyPruneLimit](./electron/services/database/utils/maintenance/historyPruneLimit/index.md)
