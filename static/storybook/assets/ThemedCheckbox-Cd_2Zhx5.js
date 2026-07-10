@@ -1,7 +1,0 @@
-import{i as e,s as t}from"./preload-helper-CT_b8DTk.js";import{k as n,t as r}from"./distribution-ruwBHiZP.js";import{L as i,Rn as a,Y as o}from"./iframe-CfLRHmV-.js";import{t as s}from"./jsx-runtime-DqZldVDK.js";var c,l,u,d,f=e((()=>{c=t(a()),r(),o(),l=s(),u=({[i]:e,checked:t,className:r=``,disabled:a=!1,onChange:o,required:s=!1})=>(0,l.jsx)(`input`,{type:`checkbox`,...n(t)?{checked:t}:{},"aria-label":e,className:`themed-checkbox ${r}`,disabled:a,onChange:o,required:s}),d=(0,c.memo)(u),u.__docgenInfo={description:`A themed checkbox input component
-
-@param props - The checkbox properties
-
-@returns The themed checkbox JSX element
-
-@public`,methods:[],displayName:`ThemedCheckboxComponent`,props:{checked:{required:!1,tsType:{name:`boolean`},description:`Whether the checkbox is checked`},onChange:{required:!1,tsType:{name:`EventHandlers.ChangeWithEvent`},description:`Callback fired when checkbox state changes`},required:{required:!1,tsType:{name:`boolean`},description:`Whether the checkbox is required for form submission`,defaultValue:{value:`false`,computed:!1}},className:{defaultValue:{value:`""`,computed:!1},required:!1},disabled:{defaultValue:{value:`false`,computed:!1},required:!1}},composes:[`AccessibilityProperties`,`CoreComponentProperties`]}}));export{f as n,d as t};
