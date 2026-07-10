@@ -405,6 +405,7 @@
 - [electron/services/monitoring/MonitorFactory](./electron/services/monitoring/MonitorFactory/index.md)
 - [electron/services/monitoring/MonitorOperationRegistry](./electron/services/monitoring/MonitorOperationRegistry/index.md)
 - [electron/services/monitoring/MonitorScheduler](./electron/services/monitoring/MonitorScheduler/index.md)
+- [electron/services/monitoring/MonitorSchedulerExecution](./electron/services/monitoring/MonitorSchedulerExecution/index.md)
 - [electron/services/monitoring/MonitorSchedulerPolicy](./electron/services/monitoring/MonitorSchedulerPolicy/index.md)
 - [electron/services/monitoring/MonitorStatusUpdateService](./electron/services/monitoring/MonitorStatusUpdateService/index.md)
 - [electron/services/monitoring/MonitorTypeRegistry](./electron/services/monitoring/MonitorTypeRegistry/index.md)
