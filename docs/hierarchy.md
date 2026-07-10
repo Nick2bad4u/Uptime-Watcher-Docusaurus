@@ -119,13 +119,6 @@
 
 ---
 
-### ChartDataPoint
-
-- [ChartDataPoint](./shared/types/chartConfig/interfaces/ChartDataPoint.md)
-    - [UptimeChartDataPoint](./shared/types/chartHybrid/interfaces/UptimeChartDataPoint.md)
-
----
-
 ### CloudEncryptionConfigBase
 
 - [CloudEncryptionConfigBase](./shared/types/cloudEncryption/interfaces/CloudEncryptionConfigBase.md)
@@ -160,8 +153,6 @@
 
     - [StatusBadgeProperties](./src/components/common/StatusBadge/interfaces/StatusBadgeProperties.md)
 
-    - [FormErrorAlertProperties](./src/components/shared/FormErrorAlert/interfaces/FormErrorAlertProperties.md)
-
     - [SettingItemProperties](./src/components/shared/SettingItem/interfaces/SettingItemProperties.md)
 
     - [MiniChartBarProperties](./src/theme/components/MiniChartBar/interfaces/MiniChartBarProperties.md)
@@ -175,8 +166,6 @@
     - [ThemedIconButtonProperties](./src/theme/components/ThemedIconButton/interfaces/ThemedIconButtonProperties.md)
 
     - [ThemedProgressProperties](./src/theme/components/ThemedProgress/interfaces/ThemedProgressProperties.md)
-
-    - [ThemedTooltipProperties](./src/theme/components/ThemedTooltip/interfaces/ThemedTooltipProperties.md)
 
 ---
 
@@ -226,7 +215,6 @@
         - [ExportDataCommand](./electron/services/commands/DatabaseCommands/classes/ExportDataCommand.md)
         - [ImportDataCommand](./electron/services/commands/DatabaseCommands/classes/ImportDataCommand.md)
         - [RestoreBackupCommand](./electron/services/commands/DatabaseCommands/classes/RestoreBackupCommand.md)
-        - [LoadSitesCommand](./electron/services/commands/DatabaseCommands/classes/LoadSitesCommand.md)
 
 ---
 
@@ -234,10 +222,11 @@
 
 - [IMonitorService](./electron/services/monitoring/types/interfaces/IMonitorService.md)
     - [CdnEdgeConsistencyMonitor](./electron/services/monitoring/CdnEdgeConsistencyMonitor/classes/CdnEdgeConsistencyMonitor.md)
-    - [DnsMonitor](./electron/services/monitoring/DnsMonitor/classes/DnsMonitor.md)
+    - [ConfigurableMonitorServiceBase](./electron/services/monitoring/shared/configurableMonitorServiceBase/classes/ConfigurableMonitorServiceBase.md)
+        - [DnsMonitor](./electron/services/monitoring/DnsMonitor/classes/DnsMonitor.md)
+        - [PingMonitor](./electron/services/monitoring/PingMonitor/classes/PingMonitor.md)
+        - [PortMonitor](./electron/services/monitoring/PortMonitor/classes/PortMonitor.md)
     - [MonitorServiceAdapterBase](./electron/services/monitoring/shared/monitorServiceAdapterBase/classes/MonitorServiceAdapterBase.md)
-    - [PingMonitor](./electron/services/monitoring/PingMonitor/classes/PingMonitor.md)
-    - [PortMonitor](./electron/services/monitoring/PortMonitor/classes/PortMonitor.md)
     - [SslMonitor](./electron/services/monitoring/SslMonitor/classes/SslMonitor.md)
     - [WebsocketKeepaliveMonitor](./electron/services/monitoring/WebsocketKeepaliveMonitor/classes/WebsocketKeepaliveMonitor.md)
 

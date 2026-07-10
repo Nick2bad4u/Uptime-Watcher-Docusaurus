@@ -1,6 +1,4 @@
-/* eslint-disable @eslint-community/eslint-comments/disable-enable-pair -- This page contains multiple unrelated eslint rules that cannot be properly paired */
-
-import type { JSX } from "react";
+import type { JSX, MouseEvent } from "react";
 
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
@@ -12,97 +10,147 @@ import clsx from "clsx";
 
 import styles from "./index.module.css";
 
+const buttonFeedbackTimers = new WeakMap<
+    HTMLButtonElement,
+    ReturnType<typeof setTimeout>
+>();
+
+const PACKAGE_JSON_EXAMPLE = `{
+  "name": "uptime-watcher",
+  "version": "23.8.0",
+  "description": "An Electron app to monitor website uptime status",
+  "main": "dist/main.js",
+  "scripts": {
+    "dev": "node scripts/run-node-cli.mjs NODE_OPTIONS=--max_old_space_size=8192 -- vite",
+    "electron-dev": "concurrently \\"npm run dev\\" \\"npm run electron -- {args}\\" --",
+    "build": "npm run build:electron-vite",
+    "test": "npm-run-all --sequential --print-name test:frontend test:shared test:electron",
+    "test:all": "npm run test && npm run test:storybook && npm run test:playwright"
+  },
+  "dependencies": {
+    "electron": "^41.5.0",
+    "react": "^19.2.5",
+    "node-sqlite3-wasm": "^0.8.56",
+    "zustand": "^5.0.12"
+  },
+  "license": "UNLICENSED"
+}`;
+
+/**
+ * Shows temporary button text and restores the original label afterward.
+ *
+ * @param button - Button element receiving feedback
+ * @param temporaryText - Short-lived feedback text
+ * @param durationMs - Duration before restoring the original text
+ */
+function showTemporaryButtonText(
+    button: HTMLButtonElement,
+    temporaryText: string,
+    durationMs = 1000
+): void {
+    const originalText = button.textContent;
+    const existingTimer = buttonFeedbackTimers.get(button);
+    if (existingTimer) {
+        clearTimeout(existingTimer);
+    }
+
+    button.textContent = temporaryText;
+    const timer = setTimeout(() => {
+        button.textContent = originalText;
+        buttonFeedbackTimers.delete(button);
+    }, durationMs);
+
+    buttonFeedbackTimers.set(button, timer);
+}
+
+/**
+ * Returns the active button when button-scoped feedback is available.
+ *
+ * @returns Active button element, or undefined when focus is elsewhere
+ */
+function getActiveButton(): HTMLButtonElement | undefined {
+    const { activeElement } = document;
+    return activeElement instanceof HTMLButtonElement
+        ? activeElement
+        : undefined;
+}
+
 /**
  * Copies code to clipboard with fallback support.
  */
-const handleCopyCode = (() => {
-    // Module-scoped variable to track the feedback timer for proper cleanup
-    let feedbackTimer: null | ReturnType<typeof setTimeout> = null;
-
-    return async (): Promise<void> => {
-        const code = `{
-  "name": "uptime-watcher",
-  "version": "12.5.0",
-  "description": "Desktop uptime monitoring",
-  "main": "dist/main.js",
-  "scripts": {
-    "start": "electron .",
-    "build": "npm run build:electron-vite",
-    "test": "vitest"
-  },
-  "dependencies": {
-    "electron": "^32.1.2",
-    "react": "^18.3.1",
-    "node-sqlite3-wasm": "^0.8.15",
-    "zustand": "^5.0.0"
-  },
-  "license": "Unlicense"
-}`;
-
-        // Try modern clipboard API first (browser environment only)
-        if (
-            typeof window !== "undefined" &&
-            "navigator" in globalThis &&
-            // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition -- Browser API access requires runtime checks
-            navigator.clipboard
-        ) {
-            try {
-                await navigator.clipboard.writeText(code);
-                // Simple feedback
-                const button = document.activeElement;
-                if (button && button instanceof HTMLButtonElement) {
-                    const originalText = button.textContent;
-                    button.textContent = "Copied!";
-
-                    // Clear any existing feedback timer
-                    if (feedbackTimer) {
-                        clearTimeout(feedbackTimer);
-                    }
-
-                    feedbackTimer = setTimeout(() => {
-                        button.textContent = originalText;
-                        feedbackTimer = null;
-                    }, 1000);
-                }
-                return;
-            } catch {
-                // Fall through to the older method
-            }
-        }
-
-        // Fallback for older browsers or when navigator is not available
-        const textArea = document.createElement("textarea");
-        textArea.value = code;
-        document.body.append(textArea);
-        textArea.select();
+const handleCopyCode = async (): Promise<void> => {
+    // Try modern clipboard API first (browser environment only)
+    if (
+        typeof window !== "undefined" &&
+        "navigator" in globalThis &&
+        "clipboard" in globalThis.navigator
+    ) {
         try {
-            document.execCommand("copy");
+            await globalThis.navigator.clipboard.writeText(
+                PACKAGE_JSON_EXAMPLE
+            );
+            const button = getActiveButton();
+            if (button) {
+                showTemporaryButtonText(button, "Copied!");
+            }
+            return;
         } catch {
-            console.warn("Copy to clipboard not supported");
+            // Fall through to the older method
         }
+    }
+
+    // Fallback for older browsers or when navigator is not available
+    const textArea = document.createElement("textarea");
+    textArea.value = PACKAGE_JSON_EXAMPLE;
+    document.body.append(textArea);
+    textArea.select();
+    try {
+        const copySucceeded = document.execCommand("copy");
+        const button = getActiveButton();
+        if (button) {
+            showTemporaryButtonText(
+                button,
+                copySucceeded ? "Copied!" : "Unavailable"
+            );
+        }
+    } catch {
+        const button = getActiveButton();
+        if (button) {
+            showTemporaryButtonText(button, "Unavailable");
+        }
+    } finally {
         textArea.remove();
-    };
-})();
+    }
+};
+
+/**
+ * Copies the sample package code and absorbs unexpected browser errors.
+ */
+async function copyCodeAndReport(): Promise<void> {
+    try {
+        await handleCopyCode();
+    } catch {
+        const button = getActiveButton();
+        if (button) {
+            showTemporaryButtonText(button, "Unavailable");
+        }
+    }
+}
 
 /**
  * Wrapper for handleCopyCode to handle the async function in onClick.
  */
 const handleCopyCodeClick = (): void => {
-    // eslint-disable-next-line promise/prefer-await-to-then -- Using Promise.then for error handling pattern in this context
-    void handleCopyCode().catch((error: unknown) => {
-        console.error("Failed to copy code:", error);
-    });
+    void copyCodeAndReport();
 };
 
 /**
  * Handles demo button click with feedback message.
+ *
+ * @param event - Demo button click event
  */
-const handleDemoButtonClick = (): void => {
-    // Show a simple demo message
-    // eslint-disable-next-line no-alert -- Alert is acceptable for user feedback in documentation context
-    alert(
-        "🎯 Demo Feature!\n\nThis is just a UI demonstration. The Add Site button is not functional in the documentation."
-    );
+const handleDemoButtonClick = (event: MouseEvent<HTMLButtonElement>): void => {
+    showTemporaryButtonText(event.currentTarget, "Demo only");
 };
 
 /**
@@ -399,39 +447,19 @@ const HomepageHeader = (): JSX.Element => (
                                         📋 Copy
                                     </button>
 
-                                    {/* eslint-disable-next-line @docusaurus/no-html-links -- External GitHub link requires standard HTML anchor */}
-                                    <a
+                                    <Link
                                         className={styles.viewButton}
                                         href="https://github.com/Nick2bad4u/Uptime-Watcher/blob/main/package.json"
                                         rel="noopener noreferrer"
                                         target="_blank"
                                     >
                                         🔗 View Full
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
 
                             <pre className={styles.codeContent}>
-                                {`{
-    "name": "uptime-watcher",
-    "version": "19.0.0",
-    "description": "An Electron app to monitor website uptime status",
-    "main": "dist/main.js",
-    "scripts": {
-        "dev": "vite",
-        "electron-dev": "concurrently "npm run dev" "npm run electron -- {args}" --",
-        "build": "npm run build:electron-vite",
-        "test": "vitest",
-        "test:all": "npm run test && npm run test:storybook && npm run test:storybook:runner"
-    },
-    "dependencies": {
-        "electron": "^39.2.3",
-        "react": "^19.2.0",
-        "node-sqlite3-wasm": "^0.8.51",
-        "zustand": "^5.0.0"
-    },
-    "license": "UNLICENSED"
-}`}
+                                {PACKAGE_JSON_EXAMPLE}
                             </pre>
                         </div>
                     </div>

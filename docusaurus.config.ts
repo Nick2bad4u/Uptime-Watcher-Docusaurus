@@ -6,11 +6,14 @@ import { themes as prismThemes } from "prism-react-renderer";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+const runtimeEnv = globalThis.process.env;
+const readDocusaurusEnv = (key: string): string | undefined => runtimeEnv[key];
+
 const siteUrl =
-    process.env["DOCUSAURUS_SITE_URL"] ?? "https://nick2bad4u.github.io";
-const baseUrl = process.env["DOCUSAURUS_BASE_URL"] ?? "/Uptime-Watcher/";
+    readDocusaurusEnv("DOCUSAURUS_SITE_URL") ?? "https://nick2bad4u.github.io";
+const baseUrl = readDocusaurusEnv("DOCUSAURUS_BASE_URL") ?? "/Uptime-Watcher/";
 const enableExperimentalFaster =
-    process.env["DOCUSAURUS_ENABLE_EXPERIMENTAL"] === "true";
+    readDocusaurusEnv("DOCUSAURUS_ENABLE_EXPERIMENTAL") === "true";
 
 const removeHeadAttrFlagKey: string = [
     "remove",
@@ -195,20 +198,6 @@ const config: Config = {
                 },
             },
         ],
-        // [
-        //     "@grnet/docusaurus-terminology",
-        //     {
-        //         // Directory containing all documentation files to process
-        //         docsDir: "./docs",
-        //         // Path to the glossary file that will be auto-generated
-        //         glossaryFilepath: "./docs/glossary.md",
-        //         // Directory containing term definition files
-        //         termsDir: "./docs/terms",
-        //         // Optional: Custom component paths (uncomment if needed)
-        //         // glossaryComponentPath: "relative/path/to/your/glossary-component",
-        //         // termPreviewComponentPath: "relative/path/to/your/term-preview-component",
-        //     },
-        // ],
         [
             "docusaurus-plugin-llms",
             {
@@ -235,34 +224,6 @@ const config: Config = {
                 title: "Uptime Watcher Documentation",
             },
         ],
-        // Broken with Docusaurs v3/v4
-        // [
-        //     "@grnet/docusaurus-terminology",
-        //     {
-        //         docsDir: "./docs",
-        //         glossaryFilepath: "./docs/glossary.md",
-        //         termsDir: "./docs/terms",
-        //     },
-        // ],
-        // [
-        //     "docusaurus-plugin-typedoc",
-        //     {
-        //         sidebar: {
-        //             autoConfiguration: false,
-        //             pretty: true,
-        //             typescript: true,
-        //             deprecatedItemClassName: "typedoc-sidebar-item-deprecated",
-        //         },
-        //         entryPoints: [
-        //             "../../src/**/*.{ts,mts,cts,tsx,js,jsx}",
-        //             "../../electron/**/*.{ts,mts,cts,tsx,js,jsx}",
-        //             "../../shared/**/*.{ts,mts,cts,tsx,js,jsx}"
-        //         ],
-        //         tsconfig: "tsconfig.typedoc.json",
-        //         plugin: ["typedoc-plugin-markdown"],
-        //         gitRevision: "main",
-        //     },
-        // ],
     ],
 
     presets: [

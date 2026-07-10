@@ -1,1 +1,0 @@
-import{i as e}from"./preload-helper-CT_b8DTk.js";var t,n=e((()=>{t=(e=300)=>new Promise(t=>{let n=globalThis.setTimeout(()=>{globalThis.clearTimeout(n),t()},e)})}));export{t as n,n as t};

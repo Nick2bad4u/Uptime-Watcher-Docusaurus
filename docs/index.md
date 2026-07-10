@@ -44,7 +44,7 @@
 
 <strong>A Electron desktop application for uptime monitoring</strong> <em>Track multiple services simultaneously with real-time updates, response time analytics, and historical data visualization</em>
 
-<comment> Application screenshots will be added here once available </comment></div>
+</div>
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/Nick2bad4u/Uptime-Watcher/main/assets/UptimeWatcherMascot.png" alt="Uptime Watcher Mascot" width="50%">
@@ -122,7 +122,7 @@ Uptime Watcher is a desktop application built with modern web technologies that 
   <img src="https://img.shields.io/badge/Electron-41.5.0-47848F?logo=electron&amp;logoColor=white" alt="Electron">
 </a>
 <a href="https://nodejs.org/">
-  <img src="https://img.shields.io/badge/Node.js-25.8.1-339933?logo=node.js&amp;logoColor=white" alt="Node.js">
+  <img src="https://img.shields.io/badge/Node.js-24.18.0_LTS-339933?logo=node.js&amp;logoColor=white" alt="Node.js">
 </a>
 
 ### <strong>State & Data Management</strong>
@@ -177,7 +177,7 @@ npm run electron-dev               # Append flags if needed: npm run electron-de
 
 <div align="center"><em>Application screenshots and demo videos will be added in future releases.</em>
 
-### Key interface components:
+### Key interface components
 
 - 📊 <strong>Main Dashboard</strong>: Real-time monitoring overview with service status across all 14 monitor types
 - ⚙️ <strong>Monitor Configuration</strong>: Easy setup for HTTP variants, TCP ports, DNS, ping, SSL certificates, CDN edge checks, replication lag, heartbeat validation, and WebSocket keepalive
@@ -213,11 +213,11 @@ npm run dist
 
 <div align="center">
 
-| Requirement              | Version                                 | Download                                    |
-| ------------------------ | --------------------------------------- | ------------------------------------------- |
-| <strong>Node.js</strong> | 25.8.1 (recommended; >=24.8.0 required) | <a href="https://nodejs.org/">Download</a>  |
-| <strong>npm</strong>     | 11.13.0 (from packageManager)           | <a href="https://www.npmjs.com/">Docs</a>   |
-| <strong>Git</strong>     | Latest version                          | <a href="https://git-scm.com/">Download</a> |
+| Requirement              | Version                                      | Download                                    |
+| ------------------------ | -------------------------------------------- | ------------------------------------------- |
+| <strong>Node.js</strong> | 24.18.0 LTS (recommended; >=24.8.0 required) | <a href="https://nodejs.org/">Download</a>  |
+| <strong>npm</strong>     | 11.16.0 (from packageManager)                | <a href="https://www.npmjs.com/">Docs</a>   |
+| <strong>Git</strong>     | Latest version                               | <a href="https://git-scm.com/">Download</a> |
 
 > **💡 Tip**: Check out the [Developer Quick Start Guide](./documents/docs/Guides/DEVELOPER_QUICK_START.md) for detailed setup instructions and architecture overview.
 
