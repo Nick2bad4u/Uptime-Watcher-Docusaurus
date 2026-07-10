@@ -403,6 +403,7 @@
 - [electron/services/monitoring/HttpLatencyMonitor](./electron/services/monitoring/HttpLatencyMonitor/index.md)
 - [electron/services/monitoring/HttpMonitor](./electron/services/monitoring/HttpMonitor/index.md)
 - [electron/services/monitoring/HttpStatusMonitor](./electron/services/monitoring/HttpStatusMonitor/index.md)
+- [electron/services/monitoring/MonitorExecutionFence](./electron/services/monitoring/MonitorExecutionFence/index.md)
 - [electron/services/monitoring/MonitorFactory](./electron/services/monitoring/MonitorFactory/index.md)
 - [electron/services/monitoring/MonitorOperationRegistry](./electron/services/monitoring/MonitorOperationRegistry/index.md)
 - [electron/services/monitoring/MonitorScheduler](./electron/services/monitoring/MonitorScheduler/index.md)
