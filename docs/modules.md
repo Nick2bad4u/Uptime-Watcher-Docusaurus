@@ -484,6 +484,7 @@
 - [electron/services/updater/AutoUpdaterService](./electron/services/updater/AutoUpdaterService/index.md)
 - [electron/services/window/ViteDevServerWaiter](./electron/services/window/ViteDevServerWaiter/index.md)
 - [electron/services/window/WindowService](./electron/services/window/WindowService/index.md)
+- [electron/services/window/WindowSessionSecurity](./electron/services/window/WindowSessionSecurity/index.md)
 - [electron/services/window/utils/pathGuards](./electron/services/window/utils/pathGuards/index.md)
 - [electron/services/window/utils/productionSecurityHeaders](./electron/services/window/utils/productionSecurityHeaders/index.md)
 - [electron/utils/boundedConcurrency](./electron/utils/boundedConcurrency/index.md)
