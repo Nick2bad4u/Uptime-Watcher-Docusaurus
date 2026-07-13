@@ -183,7 +183,7 @@
     "json": "docs/typedoc.json",
     "name": "Uptime Watcher - Complete Documentation",
     "out": "docs",
-    "prettierConfigFile": "../../prettier.config.mjs",
+    "prettierConfigFile": "prettier.config.mjs",
     "pretty": true,
     "projectDocuments": [
         "../../docs/Architecture/**/*.md",
@@ -202,6 +202,5 @@
     },
     "searchInComments": true,
     "searchInDocuments": true,
-    "treatValidationWarningsAsErrors": false,
     "tsconfig": "tsconfig.typedoc.json"
 }

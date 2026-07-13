@@ -282,7 +282,7 @@ Need help with the documentation site?
 ## 📄 License
 
 This documentation site is part of the Uptime Watcher project and is released
-under the [Unlicense](../../README.md#-license) - Public Domain.
+under the [Unlicense](https://github.com/Nick2bad4u/Uptime-Watcher#-license) - Public Domain.
 
 ---
 

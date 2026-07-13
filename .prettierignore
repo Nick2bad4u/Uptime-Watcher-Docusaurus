@@ -1,0 +1,11 @@
+.docusaurus/
+build/
+docs/
+node_modules/
+reports/
+src/**/*.css.d.ts
+static/dist/
+static/eslint-config-inspector/
+static/eslint-inspector/
+static/storybook/
+static/img/coverage.json
