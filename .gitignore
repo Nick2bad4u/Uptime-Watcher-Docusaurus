@@ -35,8 +35,3 @@ docs/src
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.cache/
-.lychee.report.md
-.lycheecache
-.stylelintcache
-reports/
